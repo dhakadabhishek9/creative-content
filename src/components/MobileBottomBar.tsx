@@ -19,7 +19,7 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
   )}`;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-lg border-t border-slate-200 px-3 py-2 sm:hidden shadow-2xl safe-area-bottom">
+    <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 px-3 py-2 sm:hidden shadow-lg safe-area-bottom">
       <div className="flex items-center justify-between gap-2 max-w-md mx-auto">
         
         {/* Call button */}
@@ -64,3 +64,4 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
     </div>
   );
 };
+

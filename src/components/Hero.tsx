@@ -29,16 +29,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator, whatsappNumber }) 
 
   return (
     <section className="relative overflow-hidden bg-linear-to-b from-slate-900 via-blue-950 to-slate-900 text-white pt-10 pb-20">
-      {/* Background Subtle Grid & Glowing Orbs */}
-      <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
-      <div className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 -right-40 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Background Subtle Grid */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Floating Badge Bar (matches poster header) */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/40 text-amber-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm shadow-inner">
+          <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/40 text-amber-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             <span>QUALITY RESEARCH. PERFECT RESULTS.</span>
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -153,7 +151,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator, whatsappNumber }) 
             </div>
 
             {/* Academic Stacked Card */}
-            <div className="relative bg-slate-900/90 rounded-3xl border border-slate-700/80 p-6 sm:p-7 shadow-2xl backdrop-blur-xl">
+            <div className="relative bg-slate-900 rounded-3xl border border-slate-700/80 p-6 sm:p-7 shadow-xl">
               
               {/* Header inside card */}
               <div className="flex items-center justify-between pb-4 border-b border-slate-800">

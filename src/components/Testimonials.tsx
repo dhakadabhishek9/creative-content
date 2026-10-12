@@ -6,7 +6,7 @@ import { TESTIMONIALS } from "@/data/servicesData";
 
 export const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 bg-slate-100/70 relative">
+    <section id="testimonials" className="py-20 bg-slate-100/70 relative section-optimize">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

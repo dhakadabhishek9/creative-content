@@ -82,7 +82,7 @@ export const AssignmentsHub: React.FC<AssignmentsHubProps> = ({ whatsappNumber }
   };
 
   return (
-    <section id="assignments" className="py-20 bg-linear-to-b from-amber-50/60 via-rose-50/30 to-slate-50 relative overflow-hidden">
+    <section id="assignments" className="py-20 bg-linear-to-b from-amber-50/60 via-rose-50/30 to-slate-50 relative overflow-hidden section-optimize">
       
       {/* Decorative notebook doodle borders */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

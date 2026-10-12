@@ -21,11 +21,7 @@ export const WhyChooseUs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"turnitin" | "ai" | "confidentiality">("turnitin");
 
   return (
-    <section id="why-choose-us" className="py-20 bg-slate-900 text-white relative overflow-hidden">
-      {/* Background radial glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
+    <section id="why-choose-us" className="py-20 bg-slate-900 text-white relative overflow-hidden section-optimize">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Section Header */}
@@ -112,7 +108,7 @@ export const WhyChooseUs: React.FC = () => {
           </div>
 
           {/* Right Column: Interactive Turnitin & AI Report Simulator (6 cols) */}
-          <div className="lg:col-span-6 bg-slate-800/60 rounded-3xl p-7 sm:p-9 border border-slate-700/80 backdrop-blur-xl flex flex-col justify-between">
+          <div className="lg:col-span-6 bg-slate-800 rounded-3xl p-7 sm:p-9 border border-slate-700/80 flex flex-col justify-between">
             <div>
               {/* Tab Selector */}
               <div className="flex items-center gap-2 mb-6 p-1.5 bg-slate-900/80 rounded-2xl border border-slate-700">

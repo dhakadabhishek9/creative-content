@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
   )}`;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition-all">
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
       {/* Top Banner Bar */}
       <div className="bg-linear-to-r from-slate-900 via-blue-950 to-indigo-950 text-white text-xs py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
