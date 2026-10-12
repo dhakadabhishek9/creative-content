@@ -20,7 +20,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenCalculator, whatsappNumber }) => {
   const cleanPhone = whatsappNumber.replace(/[^0-9]/g, "");
   const quickWhatsAppUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(
-    "Hello Satyam Sir, I am looking for academic guidance / writing support. Can you share availability and details?"
+    "Hello Joanna Mam, I am looking for academic guidance / writing support. Can you share availability and details?"
   )}`;
 
   return (
@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator, whatsappNumber }) 
           <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
           <span>Quality Research. Perfect Results.</span>
           <span className="text-slate-300">•</span>
-          <span className="font-bold text-slate-800">Teaching Life By Satyam</span>
+          <span className="font-bold text-slate-800">Teaching Life By Joanna Mam</span>
         </div>
 
         {/* Clear, Relatable Headline */}

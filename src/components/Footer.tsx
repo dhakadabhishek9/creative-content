@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide, whatsappNumbe
               </p>
             </div>
 
-            <div className="pt-2">
+            {/* <div className="pt-2">
               <button
                 onClick={onOpenDeployGuide}
                 className="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-500/40 px-3.5 py-2 rounded-xl transition-colors cursor-pointer"
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide, whatsappNumbe
                 <Globe className="w-4 h-4" />
                 <span>How to Deploy This Website Freely?</span>
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Core Services (2 cols) */}

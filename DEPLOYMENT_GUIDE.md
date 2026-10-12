@@ -94,7 +94,7 @@ export const CONTACT_INFO = {
   whatsappNumber: "+919876543210", // <-- Put your WhatsApp Number here
   displayPhone: "+91 98765 43210", // <-- Display format here
   email: "support@creativecontentresearch.com",
-  socialChannel: "Teaching Life By Satyam",
+  socialChannel: "Teaching Life By Joanna Mam",
   workingHours: "24/7 Academic Support",
   location: "New Delhi / Pan India Research Support"
 };

@@ -41,14 +41,14 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
     msg += `*Service:* ${chosenService}\n`;
     msg += `*Topic / Details:* ${topic.trim() || "Need suggestions / discuss on call"}\n`;
     msg += `------------------------------------\n`;
-    msg += `Hi Satyam Sir, please let me know your availability and how we can proceed!`;
+    msg += `Hi Joanna Mam, please let me know your availability and how we can proceed!`;
     return msg;
   };
 
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(generateWhatsAppMessage())}`;
 
   return (
-    <section id="calculator" className="py-12 sm:py-16 bg-white border-b border-slate-200">
+    <section id="calculator" className="scroll-mt-18 sm:scroll-mt-20 py-12 sm:py-16 bg-white border-b border-slate-200">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -60,7 +60,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
             Get an Instant Quote on WhatsApp
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">
-            Pick your service, enter your topic, and chat directly with Satyam Sir. No long forms to fill!
+            Pick your service, enter your topic, and chat directly with Joanna Mam. No long forms to fill!
           </p>
         </div>
 

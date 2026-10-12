@@ -41,14 +41,14 @@ export const AssignmentsHub: React.FC<AssignmentsHubProps> = ({ whatsappNumber }
     msg += `*Topic / Subject:* ${topic.trim() || "To be discussed on chat"}\n`;
     msg += `*Estimated Cost:* ₹${total}\n`;
     msg += `------------------------------------\n`;
-    msg += `Hi Satyam Sir, please confirm delivery timeline and availability! ♥`;
+    msg += `Hi Joanna Mam, please confirm delivery timeline and availability! ♥`;
     return msg;
   };
 
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(generateWhatsAppMessage())}`;
 
   return (
-    <section id="assignments" className="py-12 sm:py-16 bg-rose-50/40 border-b border-rose-100">
+    <section id="assignments" className="scroll-mt-18 sm:scroll-mt-20 py-12 sm:py-16 bg-rose-50/40 border-b border-rose-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header from poster */}

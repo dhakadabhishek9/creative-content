@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const cleanPhone = whatsappNumber.replace(/[^0-9]/g, "");
   const defaultWhatsAppUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(
-    "Hello Satyam Sir, I am looking for research writing / assignment assistance. Please share details!"
+    "Hello Joanna Mam, I am looking for research writing / assignment assistance. Please share details!"
   )}`;
 
   return (
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
                   Creative <span className="text-blue-700">Content</span>
                 </span>
                 <span className="text-[10px] bg-amber-100 text-amber-900 font-bold px-1.5 py-0.5 rounded border border-amber-200">
-                  By Satyam
+                  By Joanna Mam
                 </span>
               </div>
               <p className="text-[10px] text-slate-500 font-medium hidden sm:block">
@@ -76,14 +76,14 @@ export const Header: React.FC<HeaderProps> = ({
             <a href="#faq" className="hover:text-blue-700 transition-colors">
               FAQ
             </a>
-            <button
+            {/* <button
               onClick={onOpenDeployGuide}
               className="text-xs text-slate-500 hover:text-emerald-700 flex items-center gap-1 cursor-pointer transition-colors"
               title="Where to deploy freely"
             >
               <Globe className="w-3.5 h-3.5" />
               <span>Deploy Guide</span>
-            </button>
+            </button> */}
           </nav>
 
           {/* Right Header Actions */}

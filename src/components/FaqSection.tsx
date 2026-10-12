@@ -17,7 +17,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ whatsappNumber }) => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white relative section-optimize">
+    <section id="faq" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-20 bg-white border-b border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

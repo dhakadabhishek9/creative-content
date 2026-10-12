@@ -286,7 +286,7 @@ export const TESTIMONIALS = [
     name: "Ananya Mukherjee",
     institution: "Delhi University",
     service: "Systematic Review Paper (PRISMA)",
-    comment: "Needed a PRISMA-compliant meta-analysis paper for a Scopus journal. Satyam Sir's team delivered within 8 days with pristine forest plots and zero plagiarism. Truly life-saving service!",
+    comment: "Needed a PRISMA-compliant meta-analysis paper for a Scopus journal. Joanna Mam's team delivered within 8 days with pristine forest plots and zero plagiarism. Truly life-saving service!",
     rating: 5
   },
   {
@@ -427,7 +427,7 @@ export const CONTACT_INFO = {
   email: "support@creativecontentresearch.com",
   instagramHandle: "@creativecontent.academic",
   instagramUrl: "https://instagram.com",
-  socialChannel: "Teaching Life By Satyam",
+  socialChannel: "Teaching Life By Joanna Mam",
   workingHours: "24/7 Academic Support",
   location: "New Delhi / Pan India Research Support"
 };

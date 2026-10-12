@@ -15,7 +15,7 @@ import { WHY_CHOOSE_US_POINTS, SUBJECT_DOMAINS } from "@/data/servicesData";
 
 export const WhyChooseUs: React.FC = () => {
   return (
-    <section id="why-choose-us" className="py-14 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <section id="why-choose-us" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -105,7 +105,7 @@ export const WhyChooseUs: React.FC = () => {
             {/* Teaching Life Banner */}
             <div className="bg-blue-900 text-white rounded-2xl p-5 flex items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold text-amber-300">Teaching Life By Satyam</p>
+                <p className="text-xs font-bold text-amber-300">Teaching Life By Joanna Mam</p>
                 <p className="text-xs text-blue-100 mt-0.5">
                   Academic mentoring for research scholars &amp; students.
                 </p>
