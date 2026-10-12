@@ -5,9 +5,23 @@
     box-sizing: border-box;
   }
   html {
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -21,20 +35,6 @@
 
 .safe-area-bottom {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
-}
-
-/* Subtle WhatsApp button pulse */
-@keyframes pulse-subtle {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.04);
-  }
-}
-
-.animate-whatsapp-pulse {
-  animation: pulse-subtle 3s infinite ease-in-out;
 }
 
 /* Clean minimal scrollbar */
