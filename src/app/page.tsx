@@ -12,7 +12,6 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { DeployGuideModal } from "@/components/DeployGuideModal";
-import { SmoothWheel } from "@/components/SmoothWheel";
 import { ServiceItem, CONTACT_INFO } from "@/data/servicesData";
 
 export default function Home() {
@@ -37,9 +36,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900 pb-16 sm:pb-0">
-      {/* Silky Smooth Mouse Wheel Interpolator (No Chunking) */}
-      <SmoothWheel />
-
       {/* Header Bar */}
       <Header
         onOpenDeployGuide={() => setIsDeployModalOpen(true)}

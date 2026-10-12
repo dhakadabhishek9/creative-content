@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const cleanPhone = whatsappNumber.replace(/[^0-9]/g, "");
   const defaultWhatsAppUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(
-    "Hello Joanna Mam, I am looking for research writing / assignment assistance. Please share details!"
+    "Hello Satyam Sir, I need help with my research paper / assignment. Can you share details and price?"
   )}`;
 
   return (
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
                   Creative <span className="text-blue-700">Content</span>
                 </span>
                 <span className="text-[10px] bg-amber-100 text-amber-900 font-bold px-1.5 py-0.5 rounded border border-amber-200">
-                  By Joanna Mam
+                  Teaching Life By Satyam
                 </span>
               </div>
               <p className="text-[10px] text-slate-500 font-medium hidden sm:block">

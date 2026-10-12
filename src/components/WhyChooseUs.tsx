@@ -27,7 +27,7 @@ export const WhyChooseUs: React.FC = () => {
             Why Choose Creative Content?
           </h2>
           <p className="text-sm text-slate-600 mt-2">
-            Dedicated academic writing assistance built on genuine scholarly rigor and student trust.
+            Reliable writing help from real teachers and subject experts you can trust.
           </p>
         </div>
 
@@ -71,24 +71,24 @@ export const WhyChooseUs: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center shrink-0 text-xs">1</span>
                   <div>
-                    <p className="font-bold text-slate-900">Share Requirements on WhatsApp</p>
-                    <p className="text-slate-500">Send your topic, university guidelines, or syllabus.</p>
+                    <p className="font-bold text-slate-900">Share Details on WhatsApp</p>
+                    <p className="text-slate-500">Send your topic, college guidelines, or syllabus.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center shrink-0 text-xs">2</span>
                   <div>
-                    <p className="font-bold text-slate-900">Research &amp; Drafting</p>
-                    <p className="text-slate-500">Our subject specialists prepare original, referenced content.</p>
+                    <p className="font-bold text-slate-900">Research &amp; Writing</p>
+                    <p className="text-slate-500">Our subject teachers write fresh content with proper references.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center shrink-0 text-xs">3</span>
                   <div>
-                    <p className="font-bold text-slate-900">Plagiarism &amp; AI Verification</p>
-                    <p className="text-slate-500">Double-checked for &lt;10% similarity and 0% AI.</p>
+                    <p className="font-bold text-slate-900">Plagiarism &amp; AI Check</p>
+                    <p className="text-slate-500">Checked on Turnitin: 0% AI and under 10% similarity.</p>
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ export const WhyChooseUs: React.FC = () => {
                   <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center shrink-0 text-xs">4</span>
                   <div>
                     <p className="font-bold text-slate-900">Delivery &amp; Free Corrections</p>
-                    <p className="text-slate-500">On-time submission file + free revisions based on feedback.</p>
+                    <p className="text-slate-500">On-time file delivery + free revisions based on teacher feedback.</p>
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export const WhyChooseUs: React.FC = () => {
             {/* Teaching Life Banner */}
             <div className="bg-blue-900 text-white rounded-2xl p-5 flex items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold text-amber-300">Creative Content By Joanna Mam</p>
+                <p className="text-xs font-bold text-amber-300">Teaching Life By Satyam</p>
                 <p className="text-xs text-blue-100 mt-0.5">
                   Academic mentoring for research scholars &amp; students.
                 </p>

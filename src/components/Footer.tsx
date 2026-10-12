@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide, whatsappNumbe
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Quality Research. Perfect Results. Empowering PhD scholars, Master&apos;s researchers, and faculty members with authentic, publication-grade academic writing assistance.
+              Quality Research. Perfect Results. Helping PhD scholars, college students, and researchers with 100% original, human-written papers and assignments.
             </p>
 
             <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide, whatsappNumbe
                 <span>Follow on: {CONTACT_INFO.socialChannel}</span>
               </div>
               <p className="text-slate-400 text-[11px]">
-                Subscribe for PhD thesis tips, DRC viva guidance &amp; Scopus publication strategies.
+                Subscribe for easy research tips, viva guidance, and thesis writing help.
               </p>
             </div>
 
@@ -138,9 +138,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide, whatsappNumbe
         {/* Bottom Bar & Disclaimer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            <p>© 2026 Creative Content Academic Research Writing Services. All rights reserved.</p>
+            <p>© 2026 Creative Content Research &amp; Assignment Services. All rights reserved.</p>
             <p className="text-[11px] text-slate-600 mt-0.5">
-              Academic Disclaimer: All services are provided as academic consultation, reference research models, formatting, and proofreading support to assist scholars.
+              Academic Note: All services are provided as study guidance, model research papers, and reference material to help students learn and succeed.
             </p>
           </div>
 

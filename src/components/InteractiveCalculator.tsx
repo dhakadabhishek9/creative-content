@@ -41,7 +41,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
     msg += `*Service:* ${chosenService}\n`;
     msg += `*Topic / Details:* ${topic.trim() || "Need suggestions / discuss on call"}\n`;
     msg += `------------------------------------\n`;
-    msg += `Hi Joanna Mam, please let me know your availability and how we can proceed!`;
+    msg += `Hi Satyam Sir, please let me know the price and delivery time!`;
     return msg;
   };
 
@@ -60,7 +60,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
             Get an Instant Quote on WhatsApp
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">
-            Pick your service, enter your topic, and chat directly with Joanna Mam. No long forms to fill!
+            Pick your service, enter your topic, and chat directly with Satyam Sir. No long forms to fill!
           </p>
         </div>
 

@@ -41,7 +41,7 @@ export const AssignmentsHub: React.FC<AssignmentsHubProps> = ({ whatsappNumber }
     msg += `*Topic / Subject:* ${topic.trim() || "To be discussed on chat"}\n`;
     msg += `*Estimated Cost:* ₹${total}\n`;
     msg += `------------------------------------\n`;
-    msg += `Hi Joanna Mam, please confirm delivery timeline and availability! ♥`;
+    msg += `Hi Satyam Sir / Creative Content team, please confirm delivery timeline and price! ♥`;
     return msg;
   };
 

@@ -30,7 +30,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ whatsappNumber }) => {
             Frequently Asked <span className="text-blue-700">Questions</span>
           </h2>
           <p className="text-base text-slate-600 mt-3 font-medium">
-            Everything you need to know about our research writing procedures, revisions, confidentiality, and Turnitin reports.
+            Clear answers about how we write, free corrections, keeping your work private, and checking for plagiarism.
           </p>
         </div>
 
@@ -73,12 +73,12 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ whatsappNumber }) => {
         {/* WhatsApp Help CTA */}
         <div className="mt-12 text-center p-6 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
-            <h4 className="text-sm font-bold text-slate-900">Have a specific question not covered here?</h4>
-            <p className="text-xs text-slate-500">Ask our academic coordinator directly on WhatsApp anytime.</p>
+            <h4 className="text-sm font-bold text-slate-900">Have a question not listed here?</h4>
+            <p className="text-xs text-slate-500">Ask Satyam Sir directly on WhatsApp anytime.</p>
           </div>
           <a
             href={`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(
-              "Hi Creative Content, I have a specific question regarding my research writing project."
+              "Hi Satyam Sir, I have a question about my research paper or assignment."
             )}`}
             target="_blank"
             rel="noopener noreferrer"

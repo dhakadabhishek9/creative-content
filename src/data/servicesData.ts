@@ -29,17 +29,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-red-500 to-rose-600",
     },
     title: "SYNOPSIS",
-    subtitle: "Well-Structured Synopsis for PhD Submission",
-    description: "Expertly structured research synopsis adhering strictly to university DRC/RDC guidelines. Includes problem formulation, objectives, hypotheses, methodology, and key bibliography.",
+    subtitle: "Clear Synopsis for PhD Approval",
+    description: "Well-structured research plan ready for university committee approval. Includes research topic, goals, questions, and research method.",
     price: 1000,
     priceDisplay: "₹ 1,000",
     deliveryTime: "3 - 5 Days",
     features: [
-      "Strict University DRC/RDC Compliance",
-      "Clear Research Objectives & Hypotheses",
-      "Robust Research Methodology Design",
-      "Tentative Chapterization & Timeline",
-      "Free Turnitin Similarity Report"
+      "Follows your university format strictly",
+      "Clear research goals and questions",
+      "Proper research plan & timeline",
+      "Help with supervisor corrections",
+      "Free plagiarism check report"
     ],
     category: "phd"
   },
@@ -53,17 +53,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-blue-600 to-indigo-700",
     },
     title: "RESEARCH PAPER",
-    subtitle: "High Quality, Well-Researched & Publication Ready",
-    description: "Original, high-impact empirical or theoretical research papers tailored for UGC Care, Scopus, IEEE, Springer, and SCI indexed journals with publication-grade formatting.",
+    subtitle: "Ready for Scopus & UGC Care Journals",
+    description: "Original, high quality research paper ready to submit to good journals like Scopus, UGC Care, IEEE, or Springer with proper references.",
     price: 1000,
     priceDisplay: "₹ 1,000",
     deliveryTime: "5 - 7 Days",
     features: [
-      "Publication-Grade Writing & Layout",
-      "IEEE / APA / Harvard Citation Style",
-      "Statistical / Data Analysis Inclusion",
-      "Targeted for Scopus & UGC Care Journals",
-      "100% AI-Free & Plagiarism-Free Report"
+      "Ready for journal submission",
+      "Proper reference style (APA / IEEE / Harvard)",
+      "Charts and data analysis included",
+      "100% human written, zero AI",
+      "Plagiarism below 10% guaranteed"
     ],
     popular: true,
     category: "paper"
@@ -78,17 +78,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-emerald-600 to-teal-700",
     },
     title: "REVIEW PAPER",
-    subtitle: "In-Depth Literature Review with Critical Analysis & Insights",
-    description: "Comprehensive narrative literature review synthesizing recent research breakthroughs (last 5-10 years), highlighting critical research gaps, and proposing future research directions.",
+    subtitle: "In-Depth Study of Recent Research",
+    description: "Detailed summary of 30+ recent research papers, highlighting what is missing in current research and giving clear comparison tables.",
     price: 1000,
     priceDisplay: "₹ 1,000",
     deliveryTime: "4 - 6 Days",
     features: [
-      "Critical Synthesis of 40+ Peer-Reviewed Studies",
-      "Identification of Genuine Research Gaps",
-      "Comparative Summary Tables & Visuals",
-      "High Citation Value & Analytical Depth",
-      "Free Revisions until Acceptance"
+      "Summary of recent 30+ scientific papers",
+      "Easy-to-read comparison tables",
+      "Clear explanation of research gaps",
+      "High reference value for students",
+      "Free revisions until approved"
     ],
     category: "review"
   },
@@ -101,18 +101,18 @@ export const SERVICES: ServiceItem[] = [
       text: "text-purple-600",
       gradient: "from-purple-600 to-violet-800",
     },
-    title: "SYSTEMATIC REVIEW PAPER & META ANALYSIS",
-    subtitle: "PRISMA Based Studies with Meta-Analysis & Statistical Insights",
-    description: "Methodologically rigorous systematic reviews following PRISMA 2020 guidelines with inclusion/exclusion flowcharts, bias risk assessment (ROB2 / Newcastle-Ottawa), and quantitative meta-analysis.",
+    title: "SYSTEMATIC REVIEW & PRISMA",
+    subtitle: "PRISMA Chart & Meta-Analysis",
+    description: "Step-by-step review following official PRISMA rules with search flowcharts, data graphs, and quality checks across PubMed and Scopus.",
     price: 1000,
     priceDisplay: "₹ 1,000",
     deliveryTime: "7 - 10 Days",
     features: [
-      "Complete PRISMA 2020 Guidelines & Flowchart",
-      "Systematic Database Search (PubMed, Scopus, WoS)",
-      "Risk of Bias Assessment & Forest Plots",
-      "Heterogeneity & Sensitivity Analysis",
-      "Publication Ready for High Q1/Q2 Journals"
+      "Official PRISMA flowchart included",
+      "Search from PubMed, Scopus & Web of Science",
+      "Easy data graphs & statistics",
+      "High acceptance rate in Q1/Q2 journals",
+      "Free reviewer correction support"
     ],
     popular: true,
     category: "review"
@@ -127,17 +127,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-amber-500 to-orange-600",
     },
     title: "PHD THESIS",
-    subtitle: "Comprehensive & High Quality PhD Thesis (All Chapters Included)",
-    description: "End-to-end PhD thesis development covering Introduction, Literature Review, Methodology, Data Analysis/Findings, Discussion, Conclusion, and exhaustive bibliography according to your university template.",
+    subtitle: "Complete Thesis (All Chapters Included)",
+    description: "Full PhD thesis from Chapter 1 to the end: Introduction, Literature Review, Methodology, Data Analysis (SPSS/Python), Discussion, and References.",
     price: 8500,
     priceDisplay: "₹ 8,500",
     deliveryTime: "15 - 25 Days",
     features: [
-      "All Chapters Included (1 to 5 / 6)",
-      "Chapter-Wise Delivery & Review Milestones",
-      "SPSS / R / Python / AMOS Analysis Integration",
-      "University Formatting & Defense Prep Support",
-      "Full Confidentiality & Turnitin Guarantee (<10%)"
+      "All chapters included (1 to 5 / 6)",
+      "Delivered chapter-by-chapter for your review",
+      "Data analysis in SPSS / Python / Excel",
+      "Formatted to your university handbook",
+      "Free viva & defense talking points"
     ],
     popular: true,
     category: "phd"
@@ -152,17 +152,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-teal-600 to-emerald-700",
     },
     title: "MASTER'S DISSERTATION",
-    subtitle: "Well-Researched Dissertation for Master's Programs",
-    description: "Premium academic dissertation for M.Tech, M.Sc, MBA, M.Pharm, and MA students with rigorous theoretical grounding, empirical data collection, and academic defense readiness.",
+    subtitle: "For M.Tech, MBA, M.Sc & M.Pharm",
+    description: "High quality dissertation project for Master's students with research surveys, data charts, and clear project conclusions.",
     price: 4000,
     priceDisplay: "₹ 4,000",
     deliveryTime: "10 - 15 Days",
     features: [
-      "Tailored for M.Tech, MBA, M.Sc, M.Ed & M.Pharm",
-      "Complete Empirical or Qualitative Analysis",
-      "Plagiarism Below 10% Guaranteed",
-      "Supervisor Feedback Corrections Included",
-      "Includes Executive Summary & Abstract"
+      "Made for M.Tech, MBA, M.Sc, M.Ed & M.Pharm",
+      "Real survey data & analysis included",
+      "Low plagiarism under 10% guaranteed",
+      "Guide corrections included for free",
+      "Summary abstract and slide deck ready"
     ],
     category: "phd"
   },
@@ -176,17 +176,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-rose-600 to-pink-700",
     },
     title: "RESEARCH PROPOSAL",
-    subtitle: "Strong Research Proposal for PhD or Funding Purposes",
-    description: "Persuasive and compelling research proposal designed to win university admissions (IITs, NITs, Central Universities, Foreign Universities) or grant funding from ICSSR, SERB, UGC, or DST.",
+    subtitle: "For PhD Admission & Grants",
+    description: "Strong, persuasive proposal to win PhD admission in top universities (IIT, Central Universities, Abroad) or get research funding.",
     price: 1000,
     priceDisplay: "₹ 1,000",
     deliveryTime: "3 - 5 Days",
     features: [
-      "High Approval & Selection Track Record",
-      "Compelling Problem Statement & Novelty",
-      "Budget & Timeline Milestones (Gantt Chart)",
-      "Aligned with Funding Agency / University Criteria",
-      "Interview & Viva Preparation Notes Included"
+      "High approval rate in interviews",
+      "Clear problem statement & fresh ideas",
+      "Project timeline and budget plan",
+      "Matches funding agency guidelines",
+      "Interview prep notes included"
     ],
     category: "paper"
   },
@@ -200,17 +200,17 @@ export const SERVICES: ServiceItem[] = [
       gradient: "from-cyan-600 to-blue-700",
     },
     title: "PPT PRESENTATION",
-    subtitle: "Professional PPTs for Defense, Seminars, Interviews & Viva",
-    description: "Visually captivating, slide-by-slide academic presentation deck designed to impress DRC committees, external examiners, and conference audiences. Includes speaker notes.",
+    subtitle: "For Viva, Seminars & Defense",
+    description: "Clean, professional presentation slides designed to impress your examiners and teachers. Comes with simple speaker notes for your viva.",
     price: 700,
     priceDisplay: "₹ 700",
     deliveryTime: "1 - 2 Days",
     features: [
-      "Custom Graphic Design & Academic Diagrams",
-      "Concise Bullet Points & Key Findings Highlight",
-      "Speaker Notes for Confidence during Viva",
-      "Available in 15 to 45 Slide Decks",
-      "Fast 24-Hour Delivery Available"
+      "Clean slide design with charts & diagrams",
+      "Clear bullet points that are easy to explain",
+      "Speaker notes under slides for easy speaking",
+      "15 to 30 slides as needed",
+      "Urgent 24-hour delivery available"
     ],
     category: "presentation"
   }
@@ -220,215 +220,132 @@ export const GUARANTEES = [
   {
     icon: "ShieldCheck",
     title: "100% Original",
-    description: "Authentic scholarly writing crafted from scratch by subject matter specialists."
+    description: "Written from scratch for your topic. No copy-paste."
   },
   {
     icon: "Cpu",
-    title: "AI Free Content",
-    description: "Zero generative-AI hallucinations; verified with premium AI detectors (Turnitin / GPTZero)."
+    title: "Zero AI Content",
+    description: "Written by real human experts. 0% AI guaranteed."
   },
   {
     icon: "FileCheck",
-    title: "Plagiarism Free",
-    description: "Guaranteed under university threshold (<10%) with verified Turnitin similarity report."
+    title: "Low Plagiarism",
+    description: "Always under 10% with official Turnitin check report."
   },
   {
     icon: "Clock",
-    title: "On-Time Delivery",
-    description: "Strict deadline adherence with milestone chapter updates. Never miss a submission."
+    title: "Always On Time",
+    description: "Delivered on or before your deadline date."
   },
   {
     icon: "GraduationCap",
-    title: "Expert Writers",
-    description: "PhD & Post-Doctoral scholars across 50+ diverse academic disciplines."
+    title: "Subject Experts",
+    description: "Experienced writers for all subjects and topics."
   },
   {
     icon: "IndianRupee",
-    title: "Affordable Prices",
-    description: "Student-friendly, transparent pricing with no hidden charges or milestone traps."
+    title: "Low Student Rates",
+    description: "Affordable and transparent prices for every student."
   }
 ];
 
 export const WHY_CHOOSE_US_POINTS = [
-  { title: "Well Researched & In-Depth Content", desc: "Peer-reviewed citations from indexed scientific databases." },
-  { title: "100% Original Scholarly Work", desc: "Crafted specifically to your unique topic and problem statement." },
-  { title: "Plagiarism Free (<10% Guarantee)", desc: "Includes authentic Turnitin similarity PDF report." },
-  { title: "Expert Writers in All Subjects", desc: "STEM, Medical, Humanities, Commerce, Law & Social Sciences." },
-  { title: "On-Time Delivery, Every Time!", desc: "Prompt chapter delivery allowing you enough time to review." },
-  { title: "Strict Confidentiality Guaranteed", desc: "Your identity, topic, and documents are protected under strict NDA." },
-  { title: "Affordable Prices for Every Student", desc: "High quality academic support at democratic rates." }
+  { title: "Well Researched & In-Depth Content", desc: "Written using real research papers and books." },
+  { title: "100% Original Work (No Copy-Paste)", desc: "Fresh content crafted uniquely for your project." },
+  { title: "Plagiarism Free (<10% Guarantee)", desc: "Free Turnitin PDF report included with every order." },
+  { title: "Expert Writers in All Subjects", desc: "Engineering, Medical, Commerce, Law, Arts & Science." },
+  { title: "On-Time Delivery, Every Time!", desc: "Get your work with enough time to read and submit." },
+  { title: "Your Details are 100% Secret & Safe", desc: "We never share your topic or personal info with anyone." },
+  { title: "Affordable Prices for Every Student", desc: "High quality help at student-friendly rates." }
 ];
 
 export const SUBJECT_DOMAINS = [
-  "Computer Science & AI/ML",
+  "Computer Science & AI",
+  "Business & Management (MBA)",
   "Biotechnology & Life Sciences",
-  "Management (MBA) & Finance",
-  "Mechanical & Civil Engineering",
-  "Pharmacy & Medical Research",
+  "Engineering (Civil / Mechanical / Electrical)",
+  "Pharmacy & Medicine",
   "Psychology & Social Sciences",
-  "Education & Pedagogy",
+  "Education & Teaching",
   "Law & Legal Studies",
   "Commerce & Economics",
-  "English Literature & Linguistics",
-  "Environmental Science",
-  "Physics & Applied Mathematics"
-];
-
-export const TESTIMONIALS = [
-  {
-    name: "Dr. Rohit Verma",
-    institution: "IIT Roorkee Scholar",
-    service: "PhD Thesis & Defense PPT",
-    comment: "The depth of literature review and methodology support I received from Creative Content was outstanding. They followed my university DRC guidelines down to the last font size. Defense went smoothly!",
-    rating: 5
-  },
-  {
-    name: "Ananya Mukherjee",
-    institution: "Delhi University",
-    service: "Systematic Review Paper (PRISMA)",
-    comment: "Needed a PRISMA-compliant meta-analysis paper for a Scopus journal. Joanna Mam's team delivered within 8 days with pristine forest plots and zero plagiarism. Truly life-saving service!",
-    rating: 5
-  },
-  {
-    name: "Mohd. Tariq Khan",
-    institution: "Aligarh Muslim University",
-    service: "PhD Synopsis & Research Proposal",
-    comment: "My synopsis was approved on the first DRC meeting without revisions! The team understood the core hypotheses and theoretical framework perfectly. Very budget-friendly.",
-    rating: 5
-  },
-  {
-    name: "Pooja Deshmukh",
-    institution: "Pune University",
-    service: "Master's Dissertation (MBA)",
-    comment: "100% authentic work! The Turnitin report showed only 4% similarity and 0% AI. They even helped me understand the statistical charts for my viva.",
-    rating: 5
-  }
+  "English & Literature",
+  "Environmental Studies",
+  "Mathematics & Physics"
 ];
 
 export const FAQS = [
   {
-    question: "What if I don't have a finalized research topic yet?",
-    answer: "No problem at all! Simply tell us your department or broad area of interest on WhatsApp. Our mentors will suggest 3 to 4 trending, researchable topics with clear problem statements and novelty angles for you to discuss with your supervisor."
+    question: "What if I don't have a topic yet?",
+    answer: "No problem! Just message Satyam Sir on WhatsApp with your subject. We will give you 3 to 4 easy, approved topic ideas for free."
   },
   {
-    question: "How do you guarantee that the content is 100% human-written and not AI?",
-    answer: "Every thesis, research paper, and assignment is written from scratch by subject matter specialists citing authentic peer-reviewed papers. Prior to delivery, every file is scanned using Turnitin's official AI detector and similarity index to guarantee 0% AI and under 10% similarity."
+    question: "Is the work written by AI or ChatGPT?",
+    answer: "No. Every paper and assignment is written by real human subject experts. We scan it with Turnitin AI detector to ensure 0% AI before sending."
   },
   {
-    question: "Can you format my thesis according to my university's specific guidelines?",
-    answer: "Yes, absolutely! Just share your university's DRC/RDC ordinance or guideline PDF (e.g. Times New Roman 12pt, 1.5 line spacing, 1.5-inch left margin, specific chapter structure, APA 7th or IEEE citation). We strictly format every page accordingly."
+    question: "Can you follow my university format?",
+    answer: "Yes! Just send us your college guidelines, font size, margins, or syllabus on WhatsApp. We follow them strictly."
   },
   {
-    question: "What if my guide or DRC committee asks for corrections?",
-    answer: "We offer free revisions aligned with your supervisor's or committee's feedback until your work is accepted. Simply send us their marked comments or review notes."
+    question: "What if my teacher or guide asks for changes?",
+    answer: "We provide free revisions! Simply tell us what your teacher wants changed, and we will update it for you without extra charge."
   },
   {
-    question: "How does the payment process work?",
-    answer: "We follow a safe, milestone-based approach. You pay a small booking advance, we prepare and share chapter drafts for your review, and balance is settled milestone-by-milestone via UPI (Google Pay / PhonePe / Paytm) or Bank Transfer."
+    question: "How do I pay?",
+    answer: "You only pay a small advance first. We write and share the first draft with you. Once you are happy, pay the balance via UPI (Google Pay, PhonePe, Paytm)."
   },
   {
-    question: "How quickly can you deliver an urgent assignment or paper?",
-    answer: "For college assignments and school projects, we can deliver within 24 to 48 hours. For research papers and synopsis, our standard turnaround is 3 to 7 days, with express priority options available if you have an imminent deadline."
+    question: "Can you deliver urgent assignments in 24 hours?",
+    answer: "Yes! For urgent college assignments or PPTs, we have a fast 24 to 48 hour delivery option."
   }
 ];
 
 export const DEPLOYMENT_PLATFORMS = [
   {
-    name: "Vercel (Most Recommended)",
-    badge: "Free Forever",
+    name: "Vercel (Recommended)",
+    badge: "100% Free Forever",
     isRecommended: true,
     steps: [
-      "Create a free account on vercel.com with your GitHub account.",
-      "Push this repository to your GitHub (e.g. github.com/your-username/creative-content).",
-      "Click 'Add New Project' in Vercel and import your repository.",
-      "Click 'Deploy'. In 45 seconds, your site is live with a free domain like `creative-content.vercel.app`!",
-      "Free SSL certificate & global CDN are automatically enabled."
+      "Create a free account on vercel.com using GitHub.",
+      "Push this folder to your GitHub account.",
+      "Click 'Import' in Vercel and click 'Deploy'.",
+      "Your website is live in 1 minute with a free domain like your-site.vercel.app!"
     ],
-    domainNote: "Gives you a free *.vercel.app domain instantly. You can also connect any custom domain (e.g. creativecontent.in) with 0 extra cost."
+    domainNote: "Gives you a free *.vercel.app link. You can also add your own custom .in or .com domain for free."
   },
   {
     name: "Netlify",
-    badge: "100% Free",
+    badge: "Free",
     steps: [
-      "Sign up at netlify.com with GitHub.",
-      "Click 'Add new site' -> 'Import an existing project'.",
-      "Select your repo; build command is `npm run build` and publish directory is `.next`.",
-      "Get a free live domain like `creative-content.netlify.app`."
+      "Sign up at netlify.com.",
+      "Import your GitHub project.",
+      "Get a live link like your-site.netlify.app instantly."
     ],
-    domainNote: "Includes 100GB monthly bandwidth, free HTTPS, and custom domain support."
+    domainNote: "100% free hosting with automatic security."
   },
   {
     name: "Cloudflare Pages",
-    badge: "Unlimited Bandwidth",
+    badge: "Free",
     steps: [
-      "Create a free account on dash.cloudflare.com.",
-      "Navigate to 'Workers & Pages' -> 'Create application' -> 'Pages'.",
-      "Connect GitHub repository and choose Next.js preset.",
-      "Site goes live on `creative-content.pages.dev` with world-class DDoS protection."
+      "Sign up at dash.cloudflare.com.",
+      "Connect your GitHub repository.",
+      "Your site is live on pages.dev."
     ],
-    domainNote: "Ultra-fast global edge network with completely free SSL."
+    domainNote: "Fast and reliable hosting."
   }
-];
-
-export const ASSIGNMENT_PACKAGES = {
-  plain: {
-    id: "plain",
-    title: "Plain Format",
-    badge: "Simple & Clean",
-    pricePerPage: 35,
-    priceDisplay: "Starting @ ₹35 / Page",
-    description: "Standard typed or neat handwritten assignment with proper academic paragraphing and references.",
-    features: [
-      "Standard academic margins & spacing",
-      "Grammar & spell-checked content",
-      "Proper citations & bibliography",
-      "Delivery in Word / PDF / Print-Ready",
-      "Neat & Clean layout guaranteed"
-    ]
-  },
-  designed: {
-    id: "designed",
-    title: "With Design Format",
-    badge: "Most Loved by Students ♡",
-    pricePerPage: 65,
-    priceDisplay: "Starting @ ₹65 / Page",
-    description: "Visually captivating, professionally styled assignments with colorful headers, borders, illustrations, and custom title page.",
-    features: [
-      "Attractive layouts & aesthetic typography",
-      "Proper formatting with stylish headings & borders",
-      "Creative color schemes & infographic diagrams",
-      "Custom decorative Title Page included",
-      "Makes your work look 100% professional!"
-    ]
-  }
-};
-
-export const ASSIGNMENT_CATEGORIES = [
-  { name: "College Assignments", icon: "GraduationCap", desc: "Engineering, Commerce, Arts, Medical, Management & Science assignments." },
-  { name: "School Projects", icon: "BookOpen", desc: "CBSE, ICSE & State board practical files, charts, models & project files." },
-  { name: "Office Reports", icon: "Briefcase", desc: "Corporate presentations, executive project summaries, market surveys." },
-  { name: "Presentations (Print / Handwritten)", icon: "PenTool", desc: "Handcrafted physical files or digital presentation decks." },
-  { name: "Notes & Summaries", icon: "FileText", desc: "Exam-oriented revision sheets, flowcharts & mind maps." }
-];
-
-export const ASSIGNMENT_PILLARS = [
-  { title: "On-Time Delivery", desc: "Never miss your submission deadline", icon: "Clock" },
-  { title: "Neat & Clean Work", desc: "Flawless handwriting and formatting", icon: "ShieldCheck" },
-  { title: "Creative Designs", desc: "Eye-catching aesthetics that boost scores", icon: "Sparkles" },
-  { title: "Affordable Prices", desc: "Pocket-friendly rates for every student", icon: "Coins" }
 ];
 
 export const CONTACT_INFO = {
   brandName: "Creative Content",
-  tagline: "All-in-One Research Writing Services & Academic Projects",
+  tagline: "All-in-One Research & Assignment Writing",
   motto: "Quality Research. Perfect Results.",
-  whatsappNumber: "+919876543210", // Users can replace this with their actual number
+  whatsappNumber: "+919876543210",
   displayPhone: "+91 98765 43210",
   email: "support@creativecontentresearch.com",
   instagramHandle: "@creativecontent.academic",
   instagramUrl: "https://instagram.com",
-  socialChannel: "Creative Content",
-  workingHours: "24/7 Academic Support",
-  location: "New Delhi / Pan India Research Support"
+  socialChannel: "Teaching Life By Satyam",
+  workingHours: "24/7 Student Support",
+  location: "Pan India Academic Help"
 };
-
