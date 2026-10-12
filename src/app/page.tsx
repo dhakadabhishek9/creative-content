@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { GuaranteeStrip } from "@/components/GuaranteeStrip";
 import { ServicesGrid } from "@/components/ServicesGrid";
+import { AssignmentsHub } from "@/components/AssignmentsHub";
 import { InteractiveCalculator } from "@/components/InteractiveCalculator";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { SampleShowcase } from "@/components/SampleShowcase";
@@ -12,6 +13,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { DeployGuideModal } from "@/components/DeployGuideModal";
 import { ServiceItem, CONTACT_INFO } from "@/data/servicesData";
 
@@ -36,7 +38,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-amber-400 selection:text-slate-900">
+    <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-amber-400 selection:text-slate-900 pb-16 sm:pb-0">
       {/* Header Bar */}
       <Header
         onOpenDeployGuide={() => setIsDeployModalOpen(true)}
@@ -58,6 +60,11 @@ export default function Home() {
         {/* All 8 Core Services with #1 to #8 color-coded numbered badges */}
         <ServicesGrid
           onSelectServiceForCalculator={handleSelectServiceForCalculator}
+          whatsappNumber={whatsappNumber}
+        />
+
+        {/* Assignments & Projects Hub (from uploaded companion poster) */}
+        <AssignmentsHub
           whatsappNumber={whatsappNumber}
         />
 
@@ -86,10 +93,18 @@ export default function Home() {
         whatsappNumber={whatsappNumber}
       />
 
-      {/* Floating Interactive WhatsApp Chat Widget */}
-      <FloatingWhatsApp
+      {/* Floating Interactive WhatsApp Chat Widget (Hidden on ultra-small screens in favor of MobileBottomBar) */}
+      <div className="hidden sm:block">
+        <FloatingWhatsApp
+          whatsappNumber={whatsappNumber}
+          onUpdateWhatsAppNumber={setWhatsappNumber}
+        />
+      </div>
+
+      {/* Mobile Sticky Quick Action Bar */}
+      <MobileBottomBar
+        onOpenCalculator={handleScrollToCalculator}
         whatsappNumber={whatsappNumber}
-        onUpdateWhatsAppNumber={setWhatsappNumber}
       />
 
       {/* Free Deployment Guide Modal (Vercel, Netlify, Free Domains) */}

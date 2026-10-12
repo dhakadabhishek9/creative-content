@@ -92,9 +92,13 @@ export const Header: React.FC<HeaderProps> = ({
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
             <a href="#services" className="hover:text-blue-700 transition-colors">
-              Services & Pricing
+              Services &amp; Pricing
+            </a>
+            <a href="#assignments" className="hover:text-rose-600 transition-colors flex items-center gap-1 font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200">
+              <Sparkles className="w-3.5 h-3.5" />
+              Assignments &amp; Projects
             </a>
             <a href="#calculator" className="hover:text-blue-700 transition-colors flex items-center gap-1">
               <Sparkles className="w-4 h-4 text-amber-500" />
@@ -104,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({
               Why Us
             </a>
             <a href="#samples" className="hover:text-blue-700 transition-colors">
-              Quality Samples
+              Samples
             </a>
             <a href="#testimonials" className="hover:text-blue-700 transition-colors">
               Reviews
@@ -117,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="text-xs bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all cursor-pointer"
             >
               <Globe className="w-3.5 h-3.5" />
-              Where To Deploy Freely?
+              Free Deploy Guide
             </button>
           </nav>
 
@@ -167,18 +171,30 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-6 shadow-xl space-y-4">
-          <nav className="flex flex-col space-y-3 font-medium text-slate-800">
+          <nav className="flex flex-col space-y-2.5 font-medium text-slate-800">
             <a
               href="#services"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg hover:bg-slate-100 text-base"
+              className="py-2.5 px-3 rounded-xl hover:bg-slate-100 text-sm font-semibold flex items-center justify-between"
             >
-              Services & Pricing (8 Academic Services)
+              <span>Academic Writing (Thesis &amp; Papers)</span>
+              <span className="text-xs text-blue-700 font-bold">@ ₹700 - ₹8500</span>
+            </a>
+            <a
+              href="#assignments"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 px-3 rounded-xl bg-rose-50 text-rose-900 border border-rose-200 text-sm font-bold flex items-center justify-between"
+            >
+              <span className="flex items-center gap-1.5">
+                <Sparkles className="w-4 h-4 text-rose-500" />
+                <span>Assignments &amp; Projects Hub</span>
+              </span>
+              <span className="text-xs bg-rose-200 text-rose-900 px-2 py-0.5 rounded font-extrabold">Plain &amp; Design</span>
             </a>
             <a
               href="#calculator"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg hover:bg-slate-100 text-base flex items-center justify-between"
+              className="py-2.5 px-3 rounded-xl hover:bg-slate-100 text-sm font-semibold flex items-center justify-between"
             >
               <span>Instant Quote Builder</span>
               <span className="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-bold">Interactive</span>

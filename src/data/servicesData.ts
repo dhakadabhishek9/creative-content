@@ -370,14 +370,65 @@ export const DEPLOYMENT_PLATFORMS = [
   }
 ];
 
+export const ASSIGNMENT_PACKAGES = {
+  plain: {
+    id: "plain",
+    title: "Plain Format",
+    badge: "Simple & Clean",
+    pricePerPage: 35,
+    priceDisplay: "Starting @ ₹35 / Page",
+    description: "Standard typed or neat handwritten assignment with proper academic paragraphing and references.",
+    features: [
+      "Standard academic margins & spacing",
+      "Grammar & spell-checked content",
+      "Proper citations & bibliography",
+      "Delivery in Word / PDF / Print-Ready",
+      "Neat & Clean layout guaranteed"
+    ]
+  },
+  designed: {
+    id: "designed",
+    title: "With Design Format",
+    badge: "Most Loved by Students ♡",
+    pricePerPage: 65,
+    priceDisplay: "Starting @ ₹65 / Page",
+    description: "Visually captivating, professionally styled assignments with colorful headers, borders, illustrations, and custom title page.",
+    features: [
+      "Attractive layouts & aesthetic typography",
+      "Proper formatting with stylish headings & borders",
+      "Creative color schemes & infographic diagrams",
+      "Custom decorative Title Page included",
+      "Makes your work look 100% professional!"
+    ]
+  }
+};
+
+export const ASSIGNMENT_CATEGORIES = [
+  { name: "College Assignments", icon: "GraduationCap", desc: "Engineering, Commerce, Arts, Medical, Management & Science assignments." },
+  { name: "School Projects", icon: "BookOpen", desc: "CBSE, ICSE & State board practical files, charts, models & project files." },
+  { name: "Office Reports", icon: "Briefcase", desc: "Corporate presentations, executive project summaries, market surveys." },
+  { name: "Presentations (Print / Handwritten)", icon: "PenTool", desc: "Handcrafted physical files or digital presentation decks." },
+  { name: "Notes & Summaries", icon: "FileText", desc: "Exam-oriented revision sheets, flowcharts & mind maps." }
+];
+
+export const ASSIGNMENT_PILLARS = [
+  { title: "On-Time Delivery", desc: "Never miss your submission deadline", icon: "Clock" },
+  { title: "Neat & Clean Work", desc: "Flawless handwriting and formatting", icon: "ShieldCheck" },
+  { title: "Creative Designs", desc: "Eye-catching aesthetics that boost scores", icon: "Sparkles" },
+  { title: "Affordable Prices", desc: "Pocket-friendly rates for every student", icon: "Coins" }
+];
+
 export const CONTACT_INFO = {
   brandName: "Creative Content",
-  tagline: "All-in-One Research Writing Services",
+  tagline: "All-in-One Research Writing Services & Academic Projects",
   motto: "Quality Research. Perfect Results.",
   whatsappNumber: "+919876543210", // Users can replace this with their actual number
   displayPhone: "+91 98765 43210",
   email: "support@creativecontentresearch.com",
+  instagramHandle: "@creativecontent.academic",
+  instagramUrl: "https://instagram.com",
   socialChannel: "Teaching Life By Satyam",
   workingHours: "24/7 Academic Support",
   location: "New Delhi / Pan India Research Support"
 };
+
