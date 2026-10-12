@@ -1,195 +1,135 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { 
-  Calculator, 
-  MessageCircle, 
-  Copy, 
-  Check, 
-  ShieldCheck,
-  Send
-} from "lucide-react";
-import { SERVICES, ServiceItem, SUBJECT_DOMAINS } from "@/data/servicesData";
+import { MessageCircle, Send } from "lucide-react";
+import { ServiceItem } from "@/data/servicesData";
 
 interface InteractiveCalculatorProps {
   selectedService: ServiceItem | null;
   whatsappNumber: string;
 }
 
+const QUICK_SERVICES = [
+  { name: "Synopsis for PhD", price: "₹1,000" },
+  { name: "Research Paper", price: "₹1,000" },
+  { name: "Review / PRISMA Paper", price: "₹1,000" },
+  { name: "PhD Thesis (All Chapters)", price: "₹8,500" },
+  { name: "Master's Dissertation", price: "₹4,000" },
+  { name: "Viva / Defense PPT", price: "₹700" },
+  { name: "College / School Assignment", price: "₹35/pg" },
+  { name: "Other Custom Requirement", price: "Custom" }
+];
+
 export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
   selectedService,
   whatsappNumber
 }) => {
-  const [serviceId, setServiceId] = useState<number>(selectedService ? selectedService.id : 2);
-  const [academicLevel, setAcademicLevel] = useState<string>("PhD / Post Graduate");
-  const [subjectDomain, setSubjectDomain] = useState<string>("Computer Science & AI/ML");
-  const [researchTopic, setResearchTopic] = useState<string>("");
-  const [targetDeadline, setTargetDeadline] = useState<string>("");
-  const [copied, setCopied] = useState<boolean>(false);
+  const [chosenService, setChosenService] = useState<string>("Research Paper");
+  const [topic, setTopic] = useState<string>("");
 
   useEffect(() => {
     if (selectedService) {
-      setServiceId(selectedService.id);
+      setChosenService(selectedService.title);
     }
   }, [selectedService]);
 
-  const activeService = SERVICES.find(s => s.id === serviceId) || SERVICES[1];
   const cleanPhone = whatsappNumber.replace(/[^0-9]/g, "");
 
   const generateWhatsAppMessage = () => {
-    let message = `*🎓 ACADEMIC REQUIREMENT INQUIRY - CREATIVE CONTENT*\n`;
-    message += `------------------------------------\n`;
-    message += `*Service:* #${activeService.id} ${activeService.title} (${activeService.priceDisplay})\n`;
-    message += `*Academic Level:* ${academicLevel}\n`;
-    message += `*Subject / Domain:* ${subjectDomain}\n`;
-    message += `*Topic / Idea:* ${researchTopic.trim() || "Need suggestions from your team"}\n`;
-    message += `*Required Deadline:* ${targetDeadline || "Standard timeline"}\n`;
-    message += `------------------------------------\n`;
-    message += `Hi Satyam Sir, please let me know your availability and how we can proceed!`;
-    return message;
+    let msg = `*🎓 ACADEMIC INQUIRY - CREATIVE CONTENT*\n`;
+    msg += `------------------------------------\n`;
+    msg += `*Service:* ${chosenService}\n`;
+    msg += `*Topic / Details:* ${topic.trim() || "Need suggestions / discuss on call"}\n`;
+    msg += `------------------------------------\n`;
+    msg += `Hi Satyam Sir, please let me know your availability and how we can proceed!`;
+    return msg;
   };
 
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(generateWhatsAppMessage())}`;
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generateWhatsAppMessage());
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
-    <section id="calculator" className="py-14 sm:py-20 bg-white border-b border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="calculator" className="py-12 sm:py-16 bg-white border-b border-slate-200">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
-            Direct Requirement Builder
+            Quick 1-Step Inquiry
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-            Tell Us What You Want
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-2.5">
+            Get an Instant Quote on WhatsApp
           </h2>
-          <p className="text-sm text-slate-600 mt-2">
-            Fill in your details below and connect directly with Satyam on WhatsApp with your requirement brief.
+          <p className="text-xs sm:text-sm text-slate-600 mt-1">
+            Pick your service, enter your topic, and chat directly with Satyam Sir. No long forms to fill!
           </p>
         </div>
 
-        {/* Clean Form Card */}
-        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8">
+        {/* Minimal 2-Field Form */}
+        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-5 sm:p-7">
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                1. Select Service:
-              </label>
-              <select
-                value={serviceId}
-                onChange={(e) => setServiceId(parseInt(e.target.value))}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-800"
-              >
-                {SERVICES.map((s) => (
-                  <option key={s.id} value={s.id}>
-                    #{s.id} {s.title} ({s.priceDisplay})
-                  </option>
-                ))}
-              </select>
-            </div>
+          {/* Field 1: Quick Clickable Service Pills */}
+          <div className="mb-5">
+            <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+              1. What service do you need?
+            </label>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {QUICK_SERVICES.map((s, idx) => {
+                const isSelected = chosenService === s.name || (selectedService && selectedService.title === s.name);
 
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                2. Academic Level:
-              </label>
-              <select
-                value={academicLevel}
-                onChange={(e) => setAcademicLevel(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-800"
-              >
-                <option>PhD Scholar / Doctoral</option>
-                <option>Master&apos;s (M.Tech / MBA / M.Sc / M.Pharm)</option>
-                <option>Bachelor&apos;s / Under-Graduate</option>
-                <option>Faculty / Post-Doctoral</option>
-              </select>
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setChosenService(s.name)}
+                    className={`p-2.5 rounded-xl text-left border transition-all cursor-pointer ${
+                      isSelected
+                        ? "bg-slate-900 text-white border-slate-900 shadow-xs"
+                        : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"
+                    }`}
+                  >
+                    <div className="text-xs font-bold leading-tight truncate">
+                      {s.name}
+                    </div>
+                    <div className={`text-[10px] font-semibold mt-1 ${isSelected ? "text-amber-300" : "text-slate-500"}`}>
+                      {s.price}
+                    </div>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                3. Subject / Academic Domain:
-              </label>
-              <select
-                value={subjectDomain}
-                onChange={(e) => setSubjectDomain(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-800"
-              >
-                {SUBJECT_DOMAINS.map((domain, dIdx) => (
-                  <option key={dIdx} value={domain}>{domain}</option>
-                ))}
-                <option value="Other Subject">Other Subject</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                4. Target Deadline:
-              </label>
-              <input
-                type="date"
-                value={targetDeadline}
-                onChange={(e) => setTargetDeadline(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2 text-xs font-semibold text-slate-800"
-              />
-            </div>
-          </div>
-
+          {/* Field 2: Topic / Message */}
           <div className="mb-6">
-            <label className="block text-xs font-bold text-slate-700 mb-1.5">
-              5. Research Topic or Brief Questions:
+            <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+              2. Your Topic or Subject (Optional):
             </label>
             <input
               type="text"
-              placeholder="e.g. AI applications in smart grids, literature review on supply chain..."
-              value={researchTopic}
-              onChange={(e) => setResearchTopic(e.target.value)}
-              className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs text-slate-800"
+              placeholder="e.g. Machine learning in healthcare, or Business management case studies..."
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+              className="w-full bg-white border border-slate-300 rounded-xl p-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
-            <p className="text-[11px] text-slate-400 mt-1">
-              (You can leave this blank if you want us to suggest topics)
+            <p className="text-[11px] text-slate-500 mt-1">
+              Leave blank if you don&apos;t have a topic yet — we will suggest 3-4 topics for you.
             </p>
           </div>
 
-          {/* Pricing Summary & 1-Click WhatsApp Send */}
-          <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-bold text-slate-500 uppercase">Starting Package:</span>
-                <span className="text-xl font-black text-slate-900">{activeService.priceDisplay}</span>
-              </div>
-              <p className="text-[11px] text-slate-500 mt-0.5">
-                Includes 100% Original Content + Plagiarism &amp; AI-free verification.
-              </p>
-            </div>
+          {/* WhatsApp Direct Action Button */}
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-bold text-sm sm:text-base py-3.5 px-6 rounded-xl shadow-xs transition-all"
+          >
+            <MessageCircle className="w-5 h-5 fill-white" />
+            <span>Chat on WhatsApp with Details →</span>
+          </a>
 
-            <div className="flex items-center gap-2 w-full sm:w-auto">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-3 px-6 rounded-xl transition-all"
-              >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Send via WhatsApp</span>
-              </a>
-
-              <button
-                onClick={handleCopy}
-                className="p-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-colors cursor-pointer"
-                title="Copy message"
-              >
-                {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-              </button>
-            </div>
-          </div>
+          <p className="text-center text-[11px] text-slate-500 mt-2.5">
+            ✓ 100% Confidential • Free Topic Suggestions • Fast Response in 5 Mins
+          </p>
 
         </div>
 
