@@ -307,28 +307,28 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
-    question: "How do I place an order or connect with your team?",
-    answer: "You can click on the WhatsApp button on any service card, fill out our quick interactive quote calculator, or message us directly on WhatsApp at +91 98765 43210. Our academic coordinators respond within 5 to 15 minutes."
+    question: "What if I don't have a finalized research topic yet?",
+    answer: "No problem at all! Simply tell us your department or broad area of interest on WhatsApp. Our mentors will suggest 3 to 4 trending, researchable topics with clear problem statements and novelty angles for you to discuss with your supervisor."
   },
   {
-    question: "Do you provide a Turnitin Plagiarism & AI detection report?",
-    answer: "Yes, absolutely! Every research paper, thesis, dissertation, and synopsis comes with an official Turnitin similarity report (guaranteed below 10% or your university threshold) and an AI detection authenticity report showing 0% AI."
+    question: "How do you guarantee that the content is 100% human-written and not AI?",
+    answer: "Every thesis, research paper, and assignment is written from scratch by subject matter specialists citing authentic peer-reviewed papers. Prior to delivery, every file is scanned using Turnitin's official AI detector and similarity index to guarantee 0% AI and under 10% similarity."
   },
   {
-    question: "Can I request revisions if my supervisor suggests changes?",
-    answer: "Yes, we provide unlimited free revisions aligned with your supervisor or DRC committee feedback until your work is accepted."
+    question: "Can you format my thesis according to my university's specific guidelines?",
+    answer: "Yes, absolutely! Just share your university's DRC/RDC ordinance or guideline PDF (e.g. Times New Roman 12pt, 1.5 line spacing, 1.5-inch left margin, specific chapter structure, APA 7th or IEEE citation). We strictly format every page accordingly."
+  },
+  {
+    question: "What if my guide or DRC committee asks for corrections?",
+    answer: "We offer free revisions aligned with your supervisor's or committee's feedback until your work is accepted. Simply send us their marked comments or review notes."
   },
   {
     question: "How does the payment process work?",
-    answer: "We offer transparent, milestone-based payments. You pay a small booking advance, we share initial drafts/chapters for your review, and balance is cleared upon milestone satisfaction via UPI, Google Pay, PhonePe, or Bank Transfer."
+    answer: "We follow a safe, milestone-based approach. You pay a small booking advance, we prepare and share chapter drafts for your review, and balance is settled milestone-by-milestone via UPI (Google Pay / PhonePe / Paytm) or Bank Transfer."
   },
   {
-    question: "Is my personal details and research topic confidential?",
-    answer: "100% confidential. We operate under strict academic non-disclosure standards. We never share your data, thesis chapters, or contact information with third parties."
-  },
-  {
-    question: "What subjects and disciplines do you cover?",
-    answer: "As stated in our motto: 'Any Subject, Any Topic, We Do It All!' We have a network of 50+ subject-matter experts across Engineering, Computer Science, Medicine, Pharmacy, Management, Humanities, Social Sciences, Law, and Pure Sciences."
+    question: "How quickly can you deliver an urgent assignment or paper?",
+    answer: "For college assignments and school projects, we can deliver within 24 to 48 hours. For research papers and synopsis, our standard turnaround is 3 to 7 days, with express priority options available if you have an imminent deadline."
   }
 ];
 
