@@ -105,7 +105,7 @@ export const WhyChooseUs: React.FC = () => {
             {/* Teaching Life Banner */}
             <div className="bg-blue-900 text-white rounded-2xl p-5 flex items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold text-amber-300">Teaching Life By Joanna Mam</p>
+                <p className="text-xs font-bold text-amber-300">Creative Content By Joanna Mam</p>
                 <p className="text-xs text-blue-100 mt-0.5">
                   Academic mentoring for research scholars &amp; students.
                 </p>

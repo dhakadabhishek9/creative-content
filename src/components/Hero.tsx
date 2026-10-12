@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator, whatsappNumber }) 
           <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
           <span>Quality Research. Perfect Results.</span>
           <span className="text-slate-300">•</span>
-          <span className="font-bold text-slate-800">Teaching Life By Joanna Mam</span>
+          <span className="font-bold text-slate-800">Creative Content By Joanna Mam</span>
         </div>
 
         {/* Clear, Relatable Headline */}

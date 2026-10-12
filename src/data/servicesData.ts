@@ -427,7 +427,7 @@ export const CONTACT_INFO = {
   email: "support@creativecontentresearch.com",
   instagramHandle: "@creativecontent.academic",
   instagramUrl: "https://instagram.com",
-  socialChannel: "Teaching Life By Joanna Mam",
+  socialChannel: "Creative Content",
   workingHours: "24/7 Academic Support",
   location: "New Delhi / Pan India Research Support"
 };
