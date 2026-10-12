@@ -12,7 +12,6 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { DeployGuideModal } from "@/components/DeployGuideModal";
-import { SmoothScroll } from "@/components/SmoothScroll";
 import { ServiceItem, CONTACT_INFO } from "@/data/servicesData";
 
 export default function Home() {
@@ -36,10 +35,9 @@ export default function Home() {
   };
 
   return (
-    <SmoothScroll>
-      <div className="min-h-screen flex flex-col bg-white text-slate-900 pb-16 sm:pb-0">
-        {/* Header Bar */}
-        <Header
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 pb-16 sm:pb-0">
+      {/* Header Bar */}
+      <Header
         onOpenDeployGuide={() => setIsDeployModalOpen(true)}
         onOpenOrderModal={handleScrollToCalculator}
         whatsappNumber={whatsappNumber}
@@ -103,6 +101,5 @@ export default function Home() {
           onClose={() => setIsDeployModalOpen(false)}
         />
       </div>
-    </SmoothScroll>
   );
 }
