@@ -91,12 +91,12 @@ export const CONTACT_INFO = {
   brandName: "Creative Content",
   tagline: "All-in-One Research Writing Services",
   motto: "Quality Research. Perfect Results.",
-  whatsappNumber: "+919876543210", // <-- Put your WhatsApp Number here
-  displayPhone: "+91 98765 43210", // <-- Display format here
+  whatsappNumber: "+919685553703", // <-- Put your WhatsApp Number here
+  displayPhone: "+91 96855 53703", // <-- Display format here
   email: "support@creativecontentresearch.com",
-  socialChannel: "Creative Content",
+  socialChannel: "Teaching Life By Joanna",
   workingHours: "24/7 Academic Support",
-  location: "New Delhi / Pan India Research Support"
+  location: "88 Empire Victory, Udhyog Nagar, Palda, Indore, Madhya Pradesh, 452001"
 };
 ```
 

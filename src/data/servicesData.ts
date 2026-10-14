@@ -21,12 +21,12 @@ export interface ServiceItem {
 export const SERVICES: ServiceItem[] = [
   {
     id: 1,
-    numberBadge: "1",
+    numberBadge: "01",
     badgeColor: {
-      bg: "bg-red-500",
-      border: "border-red-400",
-      text: "text-red-600",
-      gradient: "from-red-500 to-rose-600",
+      bg: "bg-blue-600",
+      border: "border-blue-200",
+      text: "text-blue-700",
+      gradient: "from-blue-600 to-indigo-600",
     },
     title: "SYNOPSIS",
     subtitle: "Clear Synopsis for PhD Approval",
@@ -36,21 +36,21 @@ export const SERVICES: ServiceItem[] = [
     deliveryTime: "3 - 5 Days",
     features: [
       "Follows your university format strictly",
-      "Clear research goals and questions",
-      "Proper research plan & timeline",
-      "Help with supervisor corrections",
-      "Free plagiarism check report"
+      "Clear research goals and hypotheses",
+      "Comprehensive literature gap analysis",
+      "Robust methodology & timeline design",
+      "Committee-ready executive summary"
     ],
     category: "phd"
   },
   {
     id: 2,
-    numberBadge: "2",
+    numberBadge: "02",
     badgeColor: {
-      bg: "bg-blue-600",
-      border: "border-blue-400",
-      text: "text-blue-600",
-      gradient: "from-blue-600 to-indigo-700",
+      bg: "bg-indigo-600",
+      border: "border-indigo-200",
+      text: "text-indigo-700",
+      gradient: "from-indigo-600 to-violet-600",
     },
     title: "RESEARCH PAPER",
     subtitle: "Ready for Scopus & UGC Care Journals",
@@ -59,23 +59,23 @@ export const SERVICES: ServiceItem[] = [
     priceDisplay: "₹ 1,000",
     deliveryTime: "5 - 7 Days",
     features: [
-      "Ready for journal submission",
-      "Proper reference style (APA / IEEE / Harvard)",
-      "Charts and data analysis included",
-      "100% human written, zero AI",
-      "Plagiarism below 10% guaranteed"
+      "Targeted for Scopus / UGC Care indexing",
+      "Standard reference style (APA / IEEE / MLA)",
+      "High-resolution charts & data figures",
+      "Structured abstract & keyword optimization",
+      "Rigorous discussion & findings synthesis"
     ],
     popular: true,
     category: "paper"
   },
   {
     id: 3,
-    numberBadge: "3",
+    numberBadge: "03",
     badgeColor: {
       bg: "bg-emerald-600",
-      border: "border-emerald-400",
-      text: "text-emerald-600",
-      gradient: "from-emerald-600 to-teal-700",
+      border: "border-emerald-200",
+      text: "text-emerald-700",
+      gradient: "from-emerald-600 to-teal-600",
     },
     title: "REVIEW PAPER",
     subtitle: "In-Depth Study of Recent Research",
@@ -84,22 +84,22 @@ export const SERVICES: ServiceItem[] = [
     priceDisplay: "₹ 1,000",
     deliveryTime: "4 - 6 Days",
     features: [
-      "Summary of recent 30+ scientific papers",
-      "Easy-to-read comparison tables",
-      "Clear explanation of research gaps",
-      "High reference value for students",
-      "Free revisions until approved"
+      "Synthesis of 30+ recent scientific papers",
+      "Comprehensive thematic comparison tables",
+      "Critical identification of research gaps",
+      "Authoritative citation network",
+      "Ideal foundation for doctoral chapters"
     ],
     category: "review"
   },
   {
     id: 4,
-    numberBadge: "4",
+    numberBadge: "04",
     badgeColor: {
       bg: "bg-purple-600",
-      border: "border-purple-400",
-      text: "text-purple-600",
-      gradient: "from-purple-600 to-violet-800",
+      border: "border-purple-200",
+      text: "text-purple-700",
+      gradient: "from-purple-600 to-pink-600",
     },
     title: "SYSTEMATIC REVIEW & PRISMA",
     subtitle: "PRISMA Chart & Meta-Analysis",
@@ -108,22 +108,22 @@ export const SERVICES: ServiceItem[] = [
     priceDisplay: "₹ 1,000",
     deliveryTime: "7 - 10 Days",
     features: [
-      "Official PRISMA flowchart included",
-      "Search from PubMed, Scopus & Web of Science",
-      "Easy data graphs & statistics",
-      "High acceptance rate in Q1/Q2 journals",
-      "Free reviewer correction support"
+      "Official PRISMA 2020 flow diagram",
+      "Multi-database search (PubMed, Scopus, WoS)",
+      "Explicit inclusion & exclusion criteria",
+      "Risk of bias & quality assessment",
+      "Synthesis table & meta-analysis prep"
     ],
     popular: true,
     category: "review"
   },
   {
     id: 5,
-    numberBadge: "5",
+    numberBadge: "05",
     badgeColor: {
       bg: "bg-amber-600",
-      border: "border-amber-400",
-      text: "text-amber-600",
+      border: "border-amber-200",
+      text: "text-amber-800",
       gradient: "from-amber-500 to-orange-600",
     },
     title: "PHD THESIS",
@@ -144,12 +144,12 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: 6,
-    numberBadge: "6",
+    numberBadge: "06",
     badgeColor: {
       bg: "bg-teal-600",
-      border: "border-teal-400",
-      text: "text-teal-600",
-      gradient: "from-teal-600 to-emerald-700",
+      border: "border-teal-200",
+      text: "text-teal-700",
+      gradient: "from-teal-600 to-cyan-600",
     },
     title: "MASTER'S DISSERTATION",
     subtitle: "For M.Tech, MBA, M.Sc & M.Pharm",
@@ -158,26 +158,26 @@ export const SERVICES: ServiceItem[] = [
     priceDisplay: "₹ 4,000",
     deliveryTime: "10 - 15 Days",
     features: [
-      "Made for M.Tech, MBA, M.Sc, M.Ed & M.Pharm",
-      "Real survey data & analysis included",
-      "Low plagiarism under 10% guaranteed",
-      "Guide corrections included for free",
-      "Summary abstract and slide deck ready"
+      "Tailored for M.Tech, MBA, M.Sc & M.Pharm",
+      "Empirical survey design & analysis",
+      "Theoretical framework & hypotheses",
+      "Actionable practical recommendations",
+      "Executive summary & slide-ready abstract"
     ],
     category: "phd"
   },
   {
     id: 7,
-    numberBadge: "7",
+    numberBadge: "07",
     badgeColor: {
       bg: "bg-rose-600",
-      border: "border-rose-400",
-      text: "text-rose-600",
-      gradient: "from-rose-600 to-pink-700",
+      border: "border-rose-200",
+      text: "text-rose-700",
+      gradient: "from-rose-600 to-pink-600",
     },
     title: "RESEARCH PROPOSAL",
     subtitle: "For PhD Admission & Grants",
-    description: "Strong, persuasive proposal to win PhD admission in top universities (IIT, Central Universities, Abroad) or get research funding.",
+    description: "Strong, persuasive proposal to get your PhD admission or research topic approved with clear research methodology.",
     price: 1000,
     priceDisplay: "₹ 1,000",
     deliveryTime: "3 - 5 Days",
@@ -192,12 +192,12 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: 8,
-    numberBadge: "8",
+    numberBadge: "08",
     badgeColor: {
-      bg: "bg-cyan-600",
-      border: "border-cyan-400",
-      text: "text-cyan-600",
-      gradient: "from-cyan-600 to-blue-700",
+      bg: "bg-sky-600",
+      border: "border-sky-200",
+      text: "text-sky-700",
+      gradient: "from-sky-600 to-blue-600",
     },
     title: "PPT PRESENTATION",
     subtitle: "For Viva, Seminars & Defense",
@@ -277,19 +277,19 @@ export const SUBJECT_DOMAINS = [
 export const FAQS = [
   {
     question: "What if I don't have a topic yet?",
-    answer: "No problem! Just message Satyam Sir on WhatsApp with your subject. We will give you 3 to 4 easy, approved topic ideas for free."
+    answer: "No problem! Just message us on WhatsApp with your subject. We will give you 3 to 4 easy, approved topic ideas for free."
   },
   {
     question: "Is the work written by AI or ChatGPT?",
-    answer: "No. Every paper and assignment is written by real human subject experts. We scan it with Turnitin AI detector to ensure 0% AI before sending."
+    answer: "No. Every paper and assignment is written from scratch by real human subject experts. We scan it with Turnitin to guarantee 0% AI and low plagiarism before sending."
   },
   {
-    question: "Can you follow my university format?",
-    answer: "Yes! Just send us your college guidelines, font size, margins, or syllabus on WhatsApp. We follow them strictly."
+    question: "Can you follow my required format?",
+    answer: "Yes! Simply send your guidelines, margins, font size, or syllabus on WhatsApp. We follow your instructions strictly."
   },
   {
     question: "What if my teacher or guide asks for changes?",
-    answer: "We provide free revisions! Simply tell us what your teacher wants changed, and we will update it for you without extra charge."
+    answer: "We provide free revisions! Simply tell us what changes are needed, and we will update your work without extra charge."
   },
   {
     question: "How do I pay?",
@@ -297,7 +297,7 @@ export const FAQS = [
   },
   {
     question: "Can you deliver urgent assignments in 24 hours?",
-    answer: "Yes! For urgent college assignments or PPTs, we have a fast 24 to 48 hour delivery option."
+    answer: "Yes! For urgent assignments or PPTs, we have a fast 24 to 48 hour delivery option."
   }
 ];
 
@@ -340,12 +340,12 @@ export const CONTACT_INFO = {
   brandName: "Creative Content",
   tagline: "All-in-One Research & Assignment Writing",
   motto: "Quality Research. Perfect Results.",
-  whatsappNumber: "+919876543210",
-  displayPhone: "+91 98765 43210",
+  whatsappNumber: "+919685553703",
+  displayPhone: "+91 96855 53703",
   email: "support@creativecontentresearch.com",
   instagramHandle: "@creativecontent.academic",
   instagramUrl: "https://instagram.com",
-  socialChannel: "Teaching Life By Satyam",
+  socialChannel: "Teaching Life By Joanna",
   workingHours: "24/7 Student Support",
-  location: "Pan India Academic Help"
+  location: "88 Empire Victory, Udhyog Nagar, Palda, Indore, Madhya Pradesh, 452001"
 };

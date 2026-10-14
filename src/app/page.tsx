@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ServicesGrid } from "@/components/ServicesGrid";
@@ -11,34 +11,72 @@ import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
-import { DeployGuideModal } from "@/components/DeployGuideModal";
 import { ServiceItem, CONTACT_INFO } from "@/data/servicesData";
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
-  const [isDeployModalOpen, setIsDeployModalOpen] = useState(false);
   const [whatsappNumber, setWhatsappNumber] = useState<string>(CONTACT_INFO.whatsappNumber);
+
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement)?.closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (!href) return;
+
+      if (href === "#") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      if (href.startsWith("#") && href.length > 1) {
+        const id = href.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          e.preventDefault();
+          const headerOffset = 76;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          window.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: "smooth"
+          });
+          window.history.pushState(null, "", href);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+    return () => document.removeEventListener("click", handleAnchorClick);
+  }, []);
+
+  const scrollToCalculator = () => {
+    const calculatorSection = document.getElementById("calculator");
+    if (calculatorSection) {
+      const headerOffset = 76;
+      const elementPosition = calculatorSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: "smooth"
+      });
+    }
+  };
 
   const handleSelectServiceForCalculator = (service: ServiceItem) => {
     setSelectedService(service);
-    const calculatorSection = document.getElementById("calculator");
-    if (calculatorSection) {
-      calculatorSection.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToCalculator();
   };
 
   const handleScrollToCalculator = () => {
-    const calculatorSection = document.getElementById("calculator");
-    if (calculatorSection) {
-      calculatorSection.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToCalculator();
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 pb-16 sm:pb-0">
+    <div className="min-h-screen flex flex-col bg-scholarly-canvas text-slate-900 pb-16 sm:pb-0">
       {/* Header Bar */}
       <Header
-        onOpenDeployGuide={() => setIsDeployModalOpen(true)}
         onOpenOrderModal={handleScrollToCalculator}
         whatsappNumber={whatsappNumber}
       />
@@ -77,7 +115,6 @@ export default function Home() {
 
       {/* Clean Footer */}
       <Footer
-        onOpenDeployGuide={() => setIsDeployModalOpen(true)}
         whatsappNumber={whatsappNumber}
       />
 
@@ -94,12 +131,6 @@ export default function Home() {
         onOpenCalculator={handleScrollToCalculator}
         whatsappNumber={whatsappNumber}
       />
-
-        {/* Free Deployment Guide Modal */}
-        <DeployGuideModal
-          isOpen={isDeployModalOpen}
-          onClose={() => setIsDeployModalOpen(false)}
-        />
-      </div>
+    </div>
   );
 }

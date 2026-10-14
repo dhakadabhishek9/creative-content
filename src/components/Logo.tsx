@@ -1,0 +1,138 @@
+"use client";
+
+import React from "react";
+
+interface LogoProps {
+  className?: string;
+  size?: number;
+}
+
+export const Logo: React.FC<LogoProps> = ({ className = "", size = 44 }) => {
+  return (
+    <div 
+      className={`relative shrink-0 flex items-center justify-center select-none ${className}`}
+      style={{ width: size, height: size }}
+      title="Creative Content - Academic Research & Writing Desk"
+    >
+      <svg
+        viewBox="0 0 64 64"
+        width={size}
+        height={size}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
+      >
+        <defs>
+          {/* Vibrant Royal Sapphire to Midnight Gradient */}
+          <linearGradient id="comp-logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2563EB" />
+            <stop offset="40%" stopColor="#1D4ED8" />
+            <stop offset="80%" stopColor="#1E1B4B" />
+            <stop offset="100%" stopColor="#0F172A" />
+          </linearGradient>
+
+          {/* Polished 24K Gold Foil Gradient */}
+          <linearGradient id="comp-logo-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FEF08A" />
+            <stop offset="30%" stopColor="#FDE047" />
+            <stop offset="60%" stopColor="#F59E0B" />
+            <stop offset="90%" stopColor="#D97706" />
+            <stop offset="100%" stopColor="#B45309" />
+          </linearGradient>
+
+          {/* Warm Platinum White for Interlocking Harmony */}
+          <linearGradient id="comp-logo-white" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FFFFFF" />
+            <stop offset="60%" stopColor="#F8FAFC" />
+            <stop offset="100%" stopColor="#E2E8F0" />
+          </linearGradient>
+
+          {/* Ambient Depth Shadow */}
+          <filter id="comp-logo-drop" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="1.5" floodColor="#0F172A" floodOpacity="0.4" />
+          </filter>
+        </defs>
+
+        {/* Crest Shield with Elegant Beveled Corners */}
+        <rect x="3" y="3" width="58" height="58" rx="15" fill="url(#comp-logo-bg)" />
+        <rect x="3" y="3" width="58" height="58" rx="15" stroke="url(#comp-logo-gold)" strokeWidth="1.5" strokeOpacity="0.9" />
+        <rect x="5.5" y="5.5" width="53" height="53" rx="12.5" stroke="#93C5FD" strokeWidth="0.5" strokeOpacity="0.35" />
+
+        {/* Monogram & Symbol Group with Soft Elevation */}
+        <g filter="url(#comp-logo-drop)">
+          {/* Left 'C' - Creative (Majestic 24K Gold Arc) */}
+          <path
+            d="M 30 18
+               C 20 18 13 24 13 32.5
+               C 13 41 20 47 30 47
+               C 33.5 47 36.8 45.5 39 43
+               C 37.5 41.5 35.8 40.2 34.5 39.5
+               C 33 40.8 31.5 41.5 29.8 41.5
+               C 23.5 41.5 19 37.5 19 32.5
+               C 19 27.5 23.5 23.5 29.8 23.5
+               C 31.5 23.5 33 24.2 34.5 25.5
+               C 35.8 24.8 37.5 23.5 39 22
+               C 36.8 19.5 33.5 18 30 18 Z"
+            fill="url(#comp-logo-gold)"
+          />
+
+          {/* Right 'C' - Content (Crisp Platinum White Interlocking) */}
+          <path
+            d="M 34 18
+               C 44 18 51 24 51 32.5
+               C 51 41 44 47 34 47
+               C 30.5 47 27.2 45.5 25 43
+               C 26.5 41.5 28.2 40.2 29.5 39.5
+               C 31 40.8 32.5 41.5 34.2 41.5
+               C 40.5 41.5 45 37.5 45 32.5
+               C 45 27.5 40.5 23.5 34.2 23.5
+               C 32.5 23.5 31 24.2 29.5 25.5
+               C 28.2 24.8 26.5 23.5 25 22
+               C 27.2 19.5 30.5 18 34 18 Z"
+            fill="url(#comp-logo-white)"
+            fillOpacity="0.95"
+          />
+
+          {/* Central Fountain Pen Nib (Academic Synthesis) */}
+          <path
+            d="M 32 11.5
+               L 36.5 18.5
+               L 35.5 33
+               L 32 35.5
+               L 28.5 33
+               L 27.5 18.5
+               Z"
+            fill="url(#comp-logo-gold)"
+          />
+          {/* Ink Slit & Breather Hole */}
+          <line x1="32" y1="13.5" x2="32" y2="26" stroke="#0F172A" strokeWidth="0.9" strokeLinecap="round" />
+          <circle cx="32" cy="27" r="1.1" fill="#0F172A" />
+
+          {/* Radiant Excellence Diamond Star Sparkle */}
+          <path
+            d="M 32 5.5
+               L 32.9 8.6
+               L 36 9.5
+               L 32.9 10.4
+               L 32 13.5
+               L 31.1 10.4
+               L 28 9.5
+               L 31.1 8.6
+               Z"
+            fill="#FEF08A"
+          />
+
+          {/* Subtle Golden Base Accent Line */}
+          <path
+            d="M 23 52.5 L 41 52.5"
+            stroke="url(#comp-logo-gold)"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            strokeOpacity="0.8"
+          />
+          <circle cx="32" cy="52.5" r="1" fill="#FEF08A" />
+        </g>
+      </svg>
+    </div>
+  );
+};
