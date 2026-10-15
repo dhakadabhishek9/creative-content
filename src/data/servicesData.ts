@@ -342,7 +342,7 @@ export const CONTACT_INFO = {
   motto: "Quality Research. Perfect Results.",
   whatsappNumber: "+919685553703",
   displayPhone: "+91 96855 53703",
-  email: "support@creativecontentresearch.com",
+  email: "",
   instagramHandle: "@creativecontent.academic",
   instagramUrl: "https://instagram.com",
   socialChannel: "Teaching Life By Joanna",
