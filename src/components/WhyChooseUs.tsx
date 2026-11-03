@@ -1,49 +1,74 @@
 "use client";
 
 import React from "react";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, Check, ArrowRight } from "lucide-react";
 import { WHY_CHOOSE_US_POINTS, SUBJECT_DOMAINS } from "@/data/servicesData";
+
+const WORKFLOW_STEPS = [
+  {
+    title: "Consultation & Requirement Review",
+    desc: "We review your topic, rubric, target journal, or institutional formatting guidelines."
+  },
+  {
+    title: "Literature Synthesis & Drafting",
+    desc: "Specialized subject mentors compose original chapters with verified peer-reviewed citations."
+  },
+  {
+    title: "Turnitin Plagiarism & AI Verification",
+    desc: "Full scan on Turnitin to ensure similarity remains under 10% with zero AI detection."
+  },
+  {
+    title: "Delivery & Free Supervisor Corrections",
+    desc: "On-time milestone delivery, followed by free revisions based on supervisor feedback."
+  }
+];
 
 export const WhyChooseUs: React.FC = () => {
   return (
-    <section id="why-choose-us" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-20 border-b border-stone-200/80">
+    <section id="why-choose-us" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-24 bg-paper-deep/70 border-y border-line">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-[11px] font-mono uppercase tracking-widest text-stone-600 bg-stone-100 border border-stone-200/90 px-3.5 py-1 rounded-full">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-600">
+            <span className="w-6 h-px bg-gold-400" />
             Scholarly Standards
+            <span className="w-6 h-px bg-gold-400" />
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3 font-heading">
-            Why Scholars Work with Creative Content
+          <h2 className="text-3xl sm:text-[2.75rem] font-bold text-ink-900 tracking-tight mt-3 font-heading leading-tight">
+            Why Scholars Work with <span className="font-serif italic font-medium text-gold-600">Creative Content</span>
           </h2>
-          <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+          <p className="text-sm sm:text-base text-ink-500 mt-3 leading-relaxed">
             Reliable academic writing and mentoring grounded in real subject research and transparent ethics.
           </p>
         </div>
 
-        {/* 2-Column Clean Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          
-          {/* Left Column: 7 Points from Flyer */}
-          <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-sm">
-            <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
-              <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-blue-700" />
+        {/* 2-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 items-start">
+
+          {/* Left Column: Core Commitments */}
+          <div className="card-elevated rounded-3xl p-5 sm:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-line/70 mb-6">
+              <h3 className="text-base font-bold text-ink-900 flex items-center gap-2.5 font-heading">
+                <span className="w-9 h-9 rounded-xl bg-ink-900 flex items-center justify-center">
+                  <ShieldCheck className="w-4.5 h-4.5 text-gold-300" />
+                </span>
                 <span>Our Core Commitments</span>
               </h3>
-              <span className="text-xs font-bold text-blue-900 bg-blue-50 border border-blue-200 px-3 py-0.5 rounded-full">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 border border-gold-200 px-2.5 py-1 rounded-full whitespace-nowrap">
                 Indore Academic Desk
               </span>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {WHY_CHOOSE_US_POINTS.map((pt, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 shadow-2xs">✓</span>
+                <div key={idx} className="flex items-start gap-3.5">
+                  <span className="w-6 h-6 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-emerald-600" strokeWidth={3} />
+                  </span>
                   <div>
-                    <h4 className="text-xs font-extrabold text-slate-900">{pt.title}</h4>
-                    <p className="text-[11px] text-slate-500 leading-normal mt-0.5">{pt.desc}</p>
+                    <h4 className="text-sm font-semibold text-ink-900">{pt.title}</h4>
+                    <p className="text-xs text-ink-500 leading-relaxed mt-0.5">{pt.desc}</p>
                   </div>
                 </div>
               ))}
@@ -52,60 +77,44 @@ export const WhyChooseUs: React.FC = () => {
 
           {/* Right Column: How We Work (4 Simple Steps) */}
           <div className="space-y-5">
-            
-            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-sm">
-              <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider mb-4">
-                Our 4-Stage Editorial Workflow:
+
+            <div className="card-elevated rounded-3xl p-5 sm:p-8">
+              <h3 className="text-[11px] font-bold text-ink-500 uppercase tracking-[0.18em] mb-6">
+                Our 4-Stage Editorial Workflow
               </h3>
 
-              <div className="space-y-4 text-xs">
-                <div className="flex items-start gap-3">
-                  <span className="w-7 h-7 rounded-xl bg-linear-to-br from-blue-600 to-indigo-700 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs shadow-xs">01</span>
-                  <div>
-                    <p className="font-extrabold text-slate-900">Consultation &amp; Requirement Review</p>
-                    <p className="text-slate-500 mt-0.5">We review your topic, rubric, target journal, or institutional formatting guidelines.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="w-7 h-7 rounded-xl bg-linear-to-br from-indigo-600 to-violet-700 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs shadow-xs">02</span>
-                  <div>
-                    <p className="font-extrabold text-slate-900">Literature Synthesis &amp; Drafting</p>
-                    <p className="text-slate-500 mt-0.5">Specialized subject mentors compose original chapters with verified peer-reviewed citations.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="w-7 h-7 rounded-xl bg-linear-to-br from-purple-600 to-pink-600 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs shadow-xs">03</span>
-                  <div>
-                    <p className="font-extrabold text-slate-900">Turnitin Plagiarism &amp; AI Verification</p>
-                    <p className="text-slate-500 mt-0.5">Full scan on Turnitin to ensure similarity remains under 10% with zero AI detection.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="w-7 h-7 rounded-xl bg-linear-to-br from-emerald-600 to-teal-700 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs shadow-xs">04</span>
-                  <div>
-                    <p className="font-extrabold text-slate-900">Delivery &amp; Free Supervisor Corrections</p>
-                    <p className="text-slate-500 mt-0.5">On-time milestone delivery, followed by free revisions based on supervisor feedback.</p>
-                  </div>
-                </div>
-              </div>
+              <ol className="relative">
+                {WORKFLOW_STEPS.map((step, idx) => (
+                  <li key={step.title} className="relative flex items-start gap-4 pb-6 last:pb-0">
+                    {idx < WORKFLOW_STEPS.length - 1 && (
+                      <span className="absolute left-[17px] top-10 bottom-1 w-px bg-linear-to-b from-gold-300 to-line" />
+                    )}
+                    <span className="relative w-9 h-9 rounded-full bg-ink-900 text-gold-300 font-serif italic text-base flex items-center justify-center shrink-0 ring-4 ring-gold-50">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    <div className="pt-1">
+                      <p className="text-sm font-semibold text-ink-900">{step.title}</p>
+                      <p className="text-xs text-ink-500 mt-1 leading-relaxed">{step.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
 
             {/* Direct Academic Desk Banner */}
-            <div className="bg-linear-to-r from-slate-900 via-blue-950 to-slate-900 text-white rounded-2xl p-5 flex items-center justify-between gap-4 border border-blue-900/40 shadow-md">
-              <div>
-                <p className="text-xs font-bold text-amber-300">Direct Academic Desk • Indore</p>
-                <p className="text-xs text-slate-300 mt-0.5">
+            <div className="relative overflow-hidden bg-ink-900 text-white rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="absolute -right-8 -bottom-12 w-48 h-48 rounded-full bg-gold-400/15 blur-3xl pointer-events-none" />
+              <div className="relative">
+                <p className="text-xs font-bold text-gold-300 uppercase tracking-[0.12em]">Direct Academic Desk • Indore</p>
+                <p className="text-xs text-ink-200 mt-1.5 leading-relaxed">
                   Connect directly on WhatsApp for immediate topic evaluation and guidance.
                 </p>
               </div>
               <a
                 href="#calculator"
-                className="shrink-0 bg-white hover:bg-slate-100 text-slate-900 text-xs font-bold px-3.5 py-2 rounded-xl transition-colors shadow-xs"
+                className="relative shrink-0 self-start sm:self-auto inline-flex items-center gap-1 btn-gold text-xs font-bold px-4 py-2.5 rounded-full"
               >
-                Discuss Topic →
+                Discuss Topic <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
@@ -114,15 +123,15 @@ export const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Subject Domains Showcase */}
-        <div className="mt-10 bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-sm">
-          <div className="text-center max-w-xl mx-auto mb-5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-3.5 py-0.5 rounded-full">
+        <div className="mt-8 card-elevated rounded-3xl p-5 sm:p-8">
+          <div className="text-center max-w-xl mx-auto mb-6">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-600">
               Broad Scholarly Coverage
             </span>
-            <h3 className="text-base sm:text-lg font-black text-slate-900 mt-2 font-heading">
+            <h3 className="text-xl sm:text-2xl font-bold text-ink-900 mt-2 font-heading">
               Subject Disciplines We Support
             </h3>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-xs sm:text-sm text-ink-500 mt-1">
               Experienced writers and subject experts across diverse academic streams:
             </p>
           </div>
@@ -131,9 +140,9 @@ export const WhyChooseUs: React.FC = () => {
             {SUBJECT_DOMAINS.map((domain, dIdx) => (
               <span
                 key={dIdx}
-                className="inline-flex items-center gap-2 bg-slate-50 hover:bg-blue-50/70 border border-slate-200 hover:border-blue-300 text-slate-800 hover:text-blue-900 text-xs font-semibold px-3.5 py-2 rounded-xl transition-all shadow-2xs hover:shadow-xs"
+                className="inline-flex items-center gap-2 bg-paper hover:bg-white border border-line hover:border-gold-300 text-ink-700 hover:text-ink-900 text-xs font-medium px-3.5 py-2 rounded-full transition-all hover:shadow-sm"
               >
-                <span className="text-emerald-600 font-bold">✓</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
                 <span>{domain}</span>
               </span>
             ))}

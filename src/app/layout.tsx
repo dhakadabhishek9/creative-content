@@ -3,7 +3,7 @@ import "./globals.css";
 import { FAQS } from "@/data/servicesData";
 
 export const viewport: Viewport = {
-  themeColor: "#0F172A",
+  themeColor: "#0B1530",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -79,13 +79,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  icons: {
-    icon: [
-      { url: "/logo.svg", type: "image/svg+xml" },
-    ],
-    shortcut: "/logo.svg",
-    apple: "/brand-icon.jpg",
   },
   category: "Education & Research",
 };
@@ -204,7 +197,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Outfit:wght@500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@500;600;700;800&display=swap"
           rel="stylesheet"
         />
         {/* Inject Structured Data for Rich Search Snippets */}
@@ -217,7 +210,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FAF9F5] text-slate-900 antialiased font-sans selection:bg-amber-200 selection:text-slate-900">
+      <body className="min-h-screen bg-paper text-ink-900 antialiased font-sans selection:bg-gold-200 selection:text-ink-900">
         {children}
       </body>
     </html>

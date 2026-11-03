@@ -74,7 +74,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-scholarly-canvas text-slate-900 pb-16 sm:pb-0">
+    <div className="min-h-screen flex flex-col bg-scholarly-canvas text-ink-900 pb-16 sm:pb-0">
       {/* Header Bar */}
       <Header
         onOpenOrderModal={handleScrollToCalculator}

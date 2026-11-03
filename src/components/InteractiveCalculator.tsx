@@ -53,30 +53,32 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(generateWhatsAppMessage())}`;
 
   return (
-    <section id="calculator" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-24 border-b border-slate-200/80">
+    <section id="calculator" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-10">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-50 border border-blue-200/90 px-4 py-1.5 rounded-full shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-600">
+            <Sparkles className="w-3.5 h-3.5" />
             <span>Topic &amp; Research Discussion</span>
           </span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
-            Share Your Topic &amp; Requirements
+          <h2 className="text-3xl sm:text-[2.75rem] font-bold text-ink-900 tracking-tight mt-3 font-heading leading-tight">
+            Share Your Topic &amp; <span className="font-serif italic font-medium text-gold-600">Requirements</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2 max-w-lg mx-auto">
+          <p className="text-sm sm:text-base text-ink-500 mt-3 max-w-lg mx-auto">
             Select your academic level and enter your tentative topic to get free topic ideas and structural outlines on WhatsApp.
           </p>
         </div>
 
         {/* 3-Field Consultation Card */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-9 shadow-lg shadow-slate-900/5">
+        <div className="relative card-elevated rounded-[2rem] p-5 sm:p-10 overflow-hidden">
+          <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-ink-800 via-gold-400 to-ink-800" />
           
           {/* Field 1: Quick Clickable Service Pills */}
-          <div className="mb-7">
-            <label className="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">
-              1. Academic Service Required:
+          <div className="mb-8">
+            <label className="flex items-center gap-2.5 text-xs font-bold text-ink-900 uppercase tracking-[0.12em] mb-3.5">
+              <span className="w-6 h-6 rounded-full bg-ink-900 text-gold-300 font-serif italic text-sm flex items-center justify-center normal-case shrink-0">1</span>
+              Academic Service Required
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
               {QUICK_SERVICES.map((s, idx) => {
@@ -87,16 +89,16 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
                     key={idx}
                     type="button"
                     onClick={() => setChosenService(s.name)}
-                    className={`p-3 rounded-xl text-left border-2 transition-all cursor-pointer ${
+                    className={`p-3 rounded-2xl text-left border transition-all cursor-pointer ${
                       isSelected
-                        ? "bg-linear-to-r from-blue-700 to-indigo-700 text-white border-blue-600 shadow-md shadow-blue-600/30 -translate-y-0.5"
-                        : "bg-slate-50 text-slate-800 border-slate-200 hover:border-blue-300 hover:bg-blue-50/40"
+                        ? "bg-ink-900 text-white border-ink-900 shadow-lg shadow-ink-900/20 -translate-y-0.5"
+                        : "bg-paper text-ink-800 border-line hover:border-gold-300 hover:bg-white"
                     }`}
                   >
-                    <div className="text-xs font-bold leading-tight truncate">
+                    <div className="text-xs font-semibold leading-tight line-clamp-2">
                       {s.name}
                     </div>
-                    <div className={`text-[11px] font-extrabold mt-1 ${isSelected ? "text-amber-300" : "text-slate-500"}`}>
+                    <div className={`text-[11px] font-bold mt-1 font-mono ${isSelected ? "text-gold-300" : "text-ink-400"}`}>
                       {s.price}
                     </div>
                   </button>
@@ -106,11 +108,12 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
           </div>
 
           {/* Field 2: Target Deadline */}
-          <div className="mb-7">
-            <label className="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2.5">
-              2. Target Timeline:
+          <div className="mb-8">
+            <label className="flex items-center gap-2.5 text-xs font-bold text-ink-900 uppercase tracking-[0.12em] mb-3.5">
+              <span className="w-6 h-6 rounded-full bg-ink-900 text-gold-300 font-serif italic text-sm flex items-center justify-center normal-case shrink-0">2</span>
+              Target Timeline
             </label>
-            <div className="grid grid-cols-3 gap-2.5">
+            <div className="grid grid-cols-3 gap-1 p-1 rounded-2xl bg-paper border border-line">
               {[
                 { label: "⚡ Urgent (24–48h)", val: "Urgent (24–48 Hours)" },
                 { label: "📅 Standard (3–5 Days)", val: "Standard (3–5 Days)" },
@@ -120,10 +123,10 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
                   key={dIdx}
                   type="button"
                   onClick={() => setDeadline(d.val)}
-                  className={`p-2.5 rounded-xl text-center text-xs font-bold border-2 transition-all cursor-pointer ${
+                  className={`p-2.5 rounded-xl text-center text-[11px] sm:text-xs font-semibold transition-all cursor-pointer ${
                     deadline === d.val
-                      ? "bg-linear-to-r from-indigo-700 to-blue-700 text-white border-indigo-600 shadow-md shadow-indigo-600/25 -translate-y-0.5"
-                      : "bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-100"
+                      ? "bg-white text-ink-900 shadow-md shadow-ink-900/10 ring-1 ring-gold-300"
+                      : "text-ink-500 hover:text-ink-900"
                   }`}
                 >
                   {d.label}
@@ -133,20 +136,39 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
           </div>
 
           {/* Field 3: Topic / Message */}
-          <div className="mb-7">
-            <label className="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
-              3. Subject or Tentative Topic (Optional):
+          <div className="mb-8">
+            <label htmlFor="calculator-topic" className="flex flex-wrap items-center gap-2.5 text-xs font-bold text-ink-900 uppercase tracking-[0.12em] mb-3.5">
+              <span className="w-6 h-6 rounded-full bg-ink-900 text-gold-300 font-serif italic text-sm flex items-center justify-center normal-case shrink-0">3</span>
+              Subject or Tentative Topic <span className="text-ink-300 normal-case tracking-normal font-medium">(Optional)</span>
             </label>
             <input
+              id="calculator-topic"
               type="text"
               placeholder="e.g. Deep learning in healthcare, or Business management case studies..."
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              className="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 transition-all"
+              className="w-full bg-paper border border-line rounded-2xl px-4 py-3.5 text-sm text-ink-900 placeholder-ink-300 focus:outline-none focus:bg-white focus:border-gold-400 focus:ring-4 focus:ring-gold-300/25 transition-all"
             />
-            <p className="text-[11px] text-slate-500 mt-2 font-medium">
+            <p className="text-[11px] text-ink-400 mt-2.5 font-medium">
               Leave blank if you don&apos;t have a confirmed topic yet — we will suggest 3-4 approved topics tailored to your subject.
             </p>
+          </div>
+
+          {/* Live summary of the WhatsApp message */}
+          <div className="mb-5 rounded-2xl bg-paper border border-dashed border-gold-300 p-4" aria-live="polite">
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gold-700 mb-2.5">
+              Your WhatsApp message will include
+            </p>
+            <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-xs">
+              <dt className="text-ink-400">Service</dt>
+              <dd className="font-semibold text-ink-900">{chosenService}</dd>
+              <dt className="text-ink-400">Timeline</dt>
+              <dd className="font-semibold text-ink-900">{deadline}</dd>
+              <dt className="text-ink-400">Topic</dt>
+              <dd className={`break-words ${topic.trim() ? "font-semibold text-ink-900" : "italic text-ink-400"}`}>
+                {topic.trim() || "Need suggestions / discuss on call"}
+              </dd>
+            </dl>
           </div>
 
           {/* WhatsApp Direct Action Button */}
@@ -154,13 +176,13 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 btn-vibrant-emerald font-bold text-sm sm:text-base py-4 px-6 rounded-xl transition-all shadow-lg"
+            className="w-full flex items-center justify-center gap-2 btn-vibrant-emerald font-bold text-sm sm:text-base py-4 px-4 sm:px-6 rounded-full whitespace-nowrap"
           >
             <MessageCircle className="w-5 h-5 fill-white" />
             <span>Discuss Requirements on WhatsApp →</span>
           </a>
 
-          <p className="text-center text-[11px] text-slate-500 mt-3.5 font-medium">
+          <p className="text-center text-[11px] text-ink-400 mt-4 font-medium">
             ✓ 100% Confidential • Complimentary Topic Ideas • Fast Reply (~5 Mins)
           </p>
 

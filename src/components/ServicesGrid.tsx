@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { 
-  Check, 
-  MessageCircle, 
-  Clock
+import {
+  Check,
+  MessageCircle,
+  Clock,
+  ArrowRight,
+  Library
 } from "lucide-react";
 import { SERVICES, ServiceItem } from "@/data/servicesData";
 
@@ -13,9 +15,9 @@ interface ServicesGridProps {
   whatsappNumber: string;
 }
 
-export const ServicesGrid: React.FC<ServicesGridProps> = ({ 
+export const ServicesGrid: React.FC<ServicesGridProps> = ({
   onSelectServiceForCalculator,
-  whatsappNumber 
+  whatsappNumber
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const cleanPhone = whatsappNumber.replace(/[^0-9]/g, "");
@@ -28,8 +30,8 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({
     { id: "presentation", label: "Viva PPT Slides" }
   ];
 
-  const filteredServices = selectedCategory === "all" 
-    ? SERVICES 
+  const filteredServices = selectedCategory === "all"
+    ? SERVICES
     : SERVICES.filter(s => s.category === selectedCategory);
 
   const getServiceWhatsAppUrl = (service: ServiceItem) => {
@@ -38,139 +40,155 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({
   };
 
   return (
-    <section id="services" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-20 border-b border-stone-200/80">
+    <section id="services" className="scroll-mt-18 sm:scroll-mt-20 py-14 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Editorial Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-10">
-          <span className="text-[11px] font-mono uppercase tracking-widest text-blue-800 bg-blue-50 border border-blue-200/90 px-3.5 py-1 rounded-full font-bold">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-600">
+            <span className="w-6 h-px bg-gold-400" />
             Scholarly Writing &amp; Research
+            <span className="w-6 h-px bg-gold-400" />
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3 font-heading">
-            Academic Services &amp; Fixed Rates
+          <h2 className="text-3xl sm:text-[2.75rem] font-bold text-ink-900 tracking-tight mt-3 font-heading leading-tight">
+            Academic Services &amp; <span className="font-serif italic font-medium text-gold-600">Fixed Rates</span>
           </h2>
-          <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+          <p className="text-sm sm:text-base text-ink-500 mt-3 leading-relaxed">
             Transparent, fixed rates for every stage of your research. Select a service to view deliverables or message us on WhatsApp.
           </p>
-
-        {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
-          {categories.map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                selectedCategory === cat.id
-                  ? "bg-linear-to-r from-blue-700 to-indigo-700 text-white shadow-md shadow-blue-600/30 -translate-y-0.5"
-                  : "bg-white text-slate-700 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
         </div>
-      </div>
 
-      {/* 8 Attractive Color-Accented Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {filteredServices.map((service) => {
-          const waUrl = getServiceWhatsAppUrl(service);
+        {/* Category Filter Tabs: scroll sideways on phones */}
+        <div className="-mx-4 px-4 overflow-x-auto no-scrollbar mb-8 sm:mb-10">
+          <div className="flex w-max mx-auto items-center gap-1 p-1 rounded-full bg-white border border-line shadow-xs">
+            {categories.map(cat => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  selectedCategory === cat.id
+                    ? "bg-ink-900 text-white shadow-md shadow-ink-900/20"
+                    : "text-ink-500 hover:text-ink-900 hover:bg-ink-50"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
-          return (
-            <div
-              key={service.id}
-              className={`bg-white rounded-2xl border transition-all flex flex-col justify-between p-5 relative hover:shadow-xl hover:-translate-y-1 ${
-                service.popular
-                  ? "border-blue-400 ring-2 ring-blue-400/20 shadow-md"
-                  : "border-slate-200/90 hover:border-blue-300"
-              }`}
-            >
-              {service.popular && (
-                <span className="absolute -top-3 right-4 bg-linear-to-r from-amber-500 to-orange-500 text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md shadow-amber-500/20">
-                  ★ Most Requested
-                </span>
-              )}
+        {/* Service Cards: swipeable row on phones, grid from tablet up */}
+        <p className="sm:hidden -mt-4 mb-4 text-center text-[11px] font-medium text-ink-400">
+          Showing {filteredServices.length} · swipe to browse →
+        </p>
+        <div className="-mx-4 px-4 pt-3 pb-2 scroll-pl-4 flex gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar sm:mx-0 sm:px-0 sm:pb-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 sm:overflow-visible">
+          {filteredServices.map((service) => {
+            const waUrl = getServiceWhatsAppUrl(service);
 
-              <div>
-                {/* Top Bar: Vibrant Number Box + Price Stamp */}
-                <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-slate-100">
-                  <div className="flex items-center gap-2">
-                    <span className={`w-8 h-8 rounded-xl ${service.badgeColor.bg} text-white font-mono font-black text-xs flex items-center justify-center shadow-xs`}>
+            return (
+              <div
+                key={service.id}
+                className={`group w-[85%] shrink-0 snap-start sm:w-auto rounded-3xl transition-all duration-300 flex flex-col justify-between p-6 relative hover:-translate-y-1 animate-fade-up ${
+                  service.popular
+                    ? "bg-ink-900 text-white border border-ink-700 shadow-xl shadow-ink-900/25"
+                    : "card-elevated hover:shadow-xl hover:shadow-ink-900/10 hover:border-gold-200"
+                }`}
+              >
+                {service.popular && (
+                  <span className="absolute -top-3 left-6 btn-gold text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                    ★ Most Requested
+                  </span>
+                )}
+
+                <div>
+                  {/* Top Bar: Number + Price */}
+                  <div className="flex items-center justify-between mb-5">
+                    <span className={`font-serif italic text-3xl leading-none ${service.popular ? "text-gold-300" : "text-gold-500"}`}>
                       {service.numberBadge}
                     </span>
-                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                      #{service.id}
+                    <span className={`text-xs font-bold px-3 py-1 rounded-full font-mono ${
+                      service.popular
+                        ? "bg-white/10 text-gold-200 border border-white/15"
+                        : "bg-gold-50 text-gold-700 border border-gold-200"
+                    }`}>
+                      {service.priceDisplay}
                     </span>
                   </div>
 
-                  <span className="text-xs font-black text-slate-900 bg-amber-50 text-amber-900 border border-amber-300/80 px-2.5 py-0.5 rounded-full font-mono shadow-2xs">
-                    {service.priceDisplay}
-                  </span>
+                  {/* Title & Subtitle */}
+                  <h3 className={`text-base font-bold tracking-wide leading-snug font-heading ${service.popular ? "text-white" : "text-ink-900"}`}>
+                    {service.title}
+                  </h3>
+                  <p className={`text-xs font-semibold mt-1 mb-3 ${service.popular ? "text-gold-300" : "text-gold-600"}`}>
+                    {service.subtitle}
+                  </p>
+
+                  <p className={`text-xs leading-relaxed mb-4 ${service.popular ? "text-ink-200" : "text-ink-500"}`}>
+                    {service.description}
+                  </p>
+
+                  {/* Delivery time pill */}
+                  <div className={`flex items-center gap-1.5 text-[11px] font-semibold mb-4 py-1 px-2.5 rounded-full w-fit ${
+                    service.popular ? "bg-white/5 text-ink-200 border border-white/10" : "bg-paper text-ink-600 border border-line"
+                  }`}>
+                    <Clock className={`w-3.5 h-3.5 ${service.popular ? "text-gold-300" : "text-gold-500"}`} />
+                    <span>Timeline: {service.deliveryTime}</span>
+                  </div>
+
+                  {/* Deliverables List */}
+                  <ul className={`space-y-2 text-[11px] pt-4 border-t ${service.popular ? "border-white/10 text-ink-100" : "border-line/70 text-ink-600"}`}>
+                    {service.features.slice(0, 3).map((f, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-2">
+                        <span className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-px ${service.popular ? "bg-emerald-400/15" : "bg-emerald-50"}`}>
+                          <Check className={`w-2.5 h-2.5 ${service.popular ? "text-emerald-300" : "text-emerald-600"}`} strokeWidth={3} />
+                        </span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Title & Subtitle */}
-                <h3 className="text-sm font-extrabold text-slate-900 tracking-tight leading-snug">
-                  {service.title}
-                </h3>
-                <p className="text-xs font-bold text-blue-700 mt-1 mb-2">
-                  {service.subtitle}
-                </p>
+                {/* Card Actions */}
+                <div className="pt-5 mt-5 space-y-1.5">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-1.5 btn-vibrant-emerald font-bold text-xs py-2.5 px-3 rounded-full"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                    <span>Inquire on WhatsApp</span>
+                  </a>
 
-                <p className="text-xs text-slate-600 leading-relaxed mb-3.5">
-                  {service.description}
-                </p>
-
-                {/* Delivery time pill */}
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 mb-3.5 bg-slate-50 py-1 px-2.5 rounded-lg border border-slate-200/80 w-fit">
-                  <Clock className="w-3.5 h-3.5 text-blue-600" />
-                  <span>Timeline: {service.deliveryTime}</span>
+                  <button
+                    onClick={() => onSelectServiceForCalculator(service)}
+                    className={`w-full flex items-center justify-center gap-1 text-xs font-semibold py-2 rounded-full border transition-colors cursor-pointer ${
+                      service.popular
+                        ? "border-white/15 text-ink-100 hover:border-gold-300/60 hover:text-gold-200"
+                        : "border-line text-ink-600 hover:border-ink-300 hover:text-ink-900"
+                    }`}
+                  >
+                    Custom Requirements <ArrowRight className="w-3 h-3" />
+                  </button>
                 </div>
 
-                {/* Deliverables List */}
-                <ul className="space-y-1.5 text-[11px] text-slate-700 border-t border-slate-100 pt-2.5">
-                  {service.features.slice(0, 3).map((f, fIdx) => (
-                    <li key={fIdx} className="flex items-start gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5 font-bold" />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-
-              {/* Card Actions */}
-              <div className="pt-4 border-t border-slate-100 mt-4 space-y-2">
-                <a
-                  href={waUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-1.5 btn-vibrant-emerald font-bold text-xs py-2.5 px-3 rounded-xl transition-all"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                  <span>Inquire on WhatsApp</span>
-                </a>
-
-                <button
-                  onClick={() => onSelectServiceForCalculator(service)}
-                  className="w-full text-center text-[11px] font-bold text-slate-600 hover:text-blue-700 py-1 transition-colors cursor-pointer"
-                >
-                  Custom Requirements →
-                </button>
-              </div>
-
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
         {/* Any Subject Banner */}
-        <div className="mt-8 p-5 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left border border-slate-800 shadow-sm">
-          <div className="flex items-center gap-3.5">
-            <span className="text-2xl">📚</span>
+        <div className="mt-10 p-6 sm:p-7 rounded-3xl bg-ink-900 text-white flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left relative overflow-hidden">
+          <div className="absolute -right-10 -top-16 w-64 h-64 rounded-full bg-gold-400/10 blur-3xl pointer-events-none" />
+          <div className="flex flex-col sm:flex-row items-center gap-4 relative">
+            <span className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+              <Library className="w-6 h-6 text-gold-300" />
+            </span>
             <div>
-              <p className="text-xs font-bold text-amber-300 uppercase tracking-wider">
+              <p className="text-xs font-bold text-gold-300 uppercase tracking-[0.15em]">
                 All Disciplines &amp; Academic Streams Welcome
               </p>
-              <p className="text-xs text-stone-300 mt-0.5">
+              <p className="text-sm text-ink-200 mt-1">
                 Engineering, Medical &amp; Pharmacy, Management (MBA), Commerce, Law, Social Sciences, &amp; Humanities.
               </p>
             </div>
@@ -182,9 +200,9 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 bg-white hover:bg-stone-100 text-slate-900 text-xs font-bold px-4 py-2.5 rounded-xl transition-colors shadow-2xs"
+            className="relative shrink-0 inline-flex items-center gap-1.5 bg-white hover:bg-gold-50 text-ink-900 text-xs font-bold px-5 py-3 rounded-full transition-colors"
           >
-            Chat on WhatsApp →
+            Chat on WhatsApp <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
